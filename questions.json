@@ -2,11 +2,13 @@
     "questions": [
         {
             "text": "What is the capital of France?",
-            "answers": ["Paris", "London", "Berlin"]
+            "answers": ["Paris", "London", "Berlin"],
+            "correctAnswer": 0
         },
         {
             "text": "Which planet is known as the Red Planet?",
-            "answers": ["Mars", "Earth", "Jupiter"]
+            "answers": ["Mars", "Earth", "Jupiter"],
+            "correctAnswer": 0
         }
     ]
 }
