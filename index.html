@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Quiz</title>
+    <style>
+        body {
+            font-family: 'Pixel', sans-serif;
+            background: #000;
+            color: #fff;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        header {
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav li {
+            display: inline;
+            margin: 0 10px;
+        }
+        #quiz-section, #guide-section {
+            padding: 20px;
+            border: 2px solid #fff;
+        }
+        .draggable {
+            display: inline-block;
+            padding: 10px;
+            background: #444;
+            margin: 10px;
+            cursor: grab;
+        }
+        .droppable {
+            width: 200px;
+            height: 50px;
+            border: 2px dashed #fff;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Adventure Quiz</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" id="quiz-tab">Quiz</a></li>
+                    <li><a href="#" id="guide-tab">Guide</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="quiz-section">
+                <p>Welcome to the Adventure Quiz! Follow the storyline and complete the quiz questions.</p>
+                <div id="quiz-content </section>
+            <section id="guide-section" style="display: none;">
+                <p>This is the guide section. Here you can find tips and instructions on how to complete the quiz.</p>
+            </section>
+        </main>
+        <footer>
+            <p>Progress saved automatically.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('quiz-tab').addEventListener('click', function() {
+            document.getElementById('quiz-section').style.display = 'block';
+            document.getElementById('guide-section').style.display = 'none';
+        });
+
+        document.getElementById('guide-tab').addEventListener('click', function() {
+            document.getElementById('quiz-section').style.display = 'none';
+            document.getElementById('guide-section').style.display = 'block';
+        });
+
+        const draggables = document.querySelectorAll('.draggable');
+        const droppables = document.querySelectorAll('.droppable');
+
+        draggables.forEach(draggable => {
+            draggable.addEventListener('dragstart', function(event) {
+                event.dataTransfer.setData('text', event.target.id);
+            });
+        });
+
+        droppables.forEach(droppable => {
+            droppable.addEventListener('dragover', function(event) {
+                event.preventDefault();
+            });
+
+            droppable.addEventListener('drop', function(event) {
+                event.preventDefault();
+                const data = event.dataTransfer.getData('text');
+                const draggableElement = document.getElementById(data);
+                event.target.appendChild(draggableElement);
+
+                // Save progress to local storage
+                localStorage.setItem(event.target.id, data);
+            });
+        });
+
+        // Load progress from local storage
+        droppables.forEach(droppable => {
+            const savedData = localStorage.getItem(droppable.id);
+            if (savedData) {
+                const draggableElement = document.getElementById(savedData);
+                droppable.appendChild(draggableElement);
+            }
+        });
+
+        // Fetch questions from JSON file
+        fetch('questions.json')
+            .then(response => response.json())
+            .then(data => {
+                const quizContent = document.getElementById('quiz-content');
+                data.questions.forEach((question, index) => {
+                    const questionDiv = document.createElement('div');
+                    questionDiv.innerHTML = `
+                        <p>${question.text}</p>
+                        <div class="droppable" id="question${index + 1}"></div>
+                    `;
+                    quizContent.appendChild(questionDiv);
+
+                    question.answers.forEach((answer, idx) => {
+                        const answerDiv = document.createElement('div');
+                        answerDiv.classList.add('draggable');
+                        answerDiv.setAttribute('draggable', 'true');
+                        answerDiv.id = `answer${index + 1}_${idx + 1}`;
+                        answerDiv.textContent = answer;
+                        quizContent.appendChild(answerDiv);
+                    });
+                });
+
+                // Add event listeners to new draggables and droppables
+                const newDraggables = document.querySelectorAll('.draggable');
+                const newDroppables = document.querySelectorAll('.droppable');
+
+                newDraggables.forEach(draggable => {
+                    draggable.addEventListener('dragstart', function(event) {
+                        event.dataTransfer.setData('text', event.target.id);
+                    });
+                });
+
+                newDroppables.forEach(droppable => {
+                    droppable.addEventListener('dragover', function(event) {
+                        event.preventDefault();
+                    });
+
+                    droppable.addEventListener('drop', function(event) {
+                        event.preventDefault();
+                        const data = event.dataTransfer.getData('text');
+                        const draggableElement = document.getElementById(data);
+                        event.target.appendChild(draggableElement);
+
+                        // Save progress to local storage
+                        localStorage.setItem(event.target.id, data);
+                    });
+                });
+            })
+            .catch(error => console.error('Error fetching questions:', error));
+    </script>
+</body>
+</html>
