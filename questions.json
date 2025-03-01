@@ -660,6 +660,100 @@
             ],
             "correctSequence": ["SELECT * FROM resources WHERE is_available = true;"],
             "questionNumber": 70
+        },{
+            "text": "You want to record the types of fruits you find. Arrange the SQL keywords in the correct order to retrieve the 'fruit_name' column from the 'fruits' table.",
+            "answers": ["FROM", "SELECT", "fruits", "fruit_name"],
+            "correctSequence": ["SELECT", "fruit_name", "FROM", "fruits"],
+            "questionNumber": 71
+        },
+        {
+            "text": "To keep track of your shelter construction, you need to log your progress. Identify the correct SQL statement to retrieve all rows from the 'shelter_log' table where 'is_complete' is false.",
+            "answers": [
+                "SELECT * FROM shelter_log WHERE is_complete = false;",
+                "SELECT shelter_log FROM * WHERE is_complete = false;",
+                "RETRIEVE * FROM shelter_log WHERE is_complete = false;",
+                "GET * FROM shelter_log WHERE is_complete = false;"
+            ],
+            "correctSequence": ["SELECT * FROM shelter_log WHERE is_complete = false;"],
+            "questionNumber": 72
+        },
+        {
+            "text": "You want to document the different types of berries you find. Arrange the SQL keywords in the correct order to insert a new row into the 'berries' table with values ('Strawberry', 'Ripe').",
+            "answers": ["INTO", "INSERT", "berries", "VALUES", "('Strawberry', 'Ripe')"],
+            "correctSequence": ["INSERT", "INTO", "berries", "VALUES", "('Strawberry', 'Ripe')"],
+            "questionNumber": 73
+        },
+        {
+            "text": "To monitor the changes in weather, you need to create a table for weather logs. Create a new table named 'weather_log' with columns 'log_id' (integer) and 'log_details' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE weather_log (log_id INTEGER, log_details TEXT);",
+                "MAKE TABLE weather_log (log_id INT, log_details TEXT);",
+                "NEW TABLE weather_log (log_id INT, log_details TEXT);",
+                "BUILD TABLE weather_log (log_id INT, log_details TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE weather_log (log_id INTEGER, log_details TEXT);"],
+            "questionNumber": 74
+        },
+        {
+            "text": "You found an area rich in herbs. Arrange the SQL keywords in the correct order to retrieve the 'herb_type' column from the 'herbs' table.",
+            "answers": ["FROM", "SELECT", "herbs", "herb_type"],
+            "correctSequence": ["SELECT", "herb_type", "FROM", "herbs"],
+            "questionNumber": 75
+        },
+        {
+            "text": "To document your daily activities, you need to update your activity log. What is the correct SQL statement to update the log status in the 'activity_log' table to 'In Progress' for today's entry?",
+            "answers": [
+                "UPDATE activity_log SET status = 'In Progress' WHERE date = CURRENT_DATE;",
+                "SET status = 'In Progress' WHERE date = CURRENT_DATE IN activity_log;",
+                "MODIFY activity_log SET status TO 'In Progress' WHERE date = CURRENT_DATE;",
+                "CHANGE status TO 'In Progress' FOR date = CURRENT_DATE IN activity_log;"
+            ],
+            "correctSequence": ["UPDATE activity_log SET status = 'In Progress' WHERE date = CURRENT_DATE;"],
+            "questionNumber": 76
+        },
+        {
+            "text": "You need to document different types of insects on the island. Create a new table named 'insects' with columns 'insect_id' (integer) and 'insect_name' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE insects (insect_id INTEGER, insect_name TEXT);",
+                "MAKE TABLE insects (insect_id INT, insect_name TEXT);",
+                "NEW TABLE insects (insect_id INT, insect_name TEXT);",
+                "BUILD TABLE insects (insect_id INT, insect_name TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE insects (insect_id INTEGER, insect_name TEXT);"],
+            "questionNumber": 77
+        },
+        {
+            "text": "You want to record your daily meals. Identify the correct SQL statement to delete the entry for a spoiled meal from the 'meals' table where the meal_id is 12.",
+            "answers": [
+                "DELETE FROM meals WHERE meal_id = 12;",
+                "REMOVE FROM meals WHERE meal_id = 12;",
+                "DELETE meals WHERE meal_id = 12;",
+                "REMOVE meal_id = 12 FROM meals;"
+            ],
+            "correctSequence": ["DELETE FROM meals WHERE meal_id = 12;"],
+            "questionNumber": 78
+        },
+        {
+            "text": "You find various types of minerals on the island. Create a new table named 'minerals' with columns 'mineral_id' (integer) and 'mineral_name' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE minerals (mineral_id INTEGER, mineral_name TEXT);",
+                "MAKE TABLE minerals (mineral_id INT, mineral_name TEXT);",
+                "NEW TABLE minerals (mineral_id INT, mineral_name TEXT);",
+                "BUILD TABLE minerals (mineral_id INT, mineral_name TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE minerals (mineral_id INTEGER, mineral_name TEXT);"],
+            "questionNumber": 79
+        },
+        {
+            "text": "To document the resources you've found, you need to update the resource log. What is the correct SQL statement to select all columns from the 'resources' table where 'is_edible' is true?",
+            "answers": [
+                "SELECT * FROM resources WHERE is_edible = true;",
+                "SELECT resources FROM * WHERE is_edible = true;",
+                "RETRIEVE * FROM resources WHERE is_edible = true;",
+                "GET * FROM resources WHERE is_edible = true;"
+            ],
+            "correctSequence": ["SELECT * FROM resources WHERE is_edible = true;"],
+            "questionNumber": 80
         }
     ]
 }
