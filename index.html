@@ -180,6 +180,43 @@
     width: 150px;
     height: 150px;
 }
+.accordion {
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    margin:5px auto;
+}
+.accordion:after {
+    content: '\002B';
+    color: #fff;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: '\2212';
+}
+.panel {
+    padding: 0 18px;
+    background-color: #333;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+#loading-guide {
+    text-align: center;
+    margin-top: 20px;
+}
+#loading-guide img {
+    width: 150px;
+    height: 150px;
+}
 
         button {
             background-color: #ff6600;
@@ -267,8 +304,13 @@
                 </div>
             </section>
             <section id="guide-section" style="display: none;">
-                <p>This is the guide section. Here you can find tips and instructions on how to complete the quiz.</p>
-            </section>
+    <p>This is the guide section. Here you can find tips and instructions on how to complete the quiz.</p>
+    <div id="loading-guide" class="hidden">
+        <img src="your-pixel-art-url" alt="Loading...">
+        <p>Loading guide...</p>
+    </div>
+    <div id="guide-content"></div>
+</section>
         </main>
         <footer>
             <p>Progress saved automatically.</p>
@@ -282,9 +324,54 @@
     });
 
     document.getElementById('guide-tab').addEventListener('click', function() {
-        document.getElementById('quiz-section').style.display = 'none';
-        document.getElementById('guide-section').style.display = 'block';
+    document.getElementById('quiz-section').style.display = 'none';
+    document.getElementById('guide-section').style.display = 'block';
+
+    // Show loader while fetching guide data
+    document.getElementById('loading-guide').classList.remove('hidden');
+    
+    fetch('https://raw.githubusercontent.com/hoodaatwa/Quiz/main/guide.json')
+        .then(response => response.json())
+        .then(data => {
+            guides = data.guides;
+            loadGuides();
+            document.getElementById('loading-guide').classList.add('hidden');
+        })
+        .catch(error => {
+            console.error('Error fetching guide:', error);
+            document.getElementById('loading-guide').classList.add('hidden');
+        });
+});
+
+let guides = [];
+
+function loadGuides() {
+    const guideContent = document.getElementById('guide-content');
+    guideContent.innerHTML = '';
+    
+    guides.forEach((guide, idx) => {
+        const accordionButton = document.createElement('button');
+        accordionButton.className = 'accordion';
+        accordionButton.textContent = guide.title;
+
+        const panelDiv = document.createElement('div');
+        panelDiv.className = 'panel';
+        panelDiv.innerHTML = `<p>${guide.content}</p>`;
+
+        accordionButton.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+            }
+        });
+
+        guideContent.appendChild(accordionButton);
+        guideContent.appendChild(panelDiv);
     });
+}
 
     let currentQuestionIndex = 0;
     let questions = [];
