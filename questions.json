@@ -2,13 +2,15 @@
     "questions": [
         {
             "text": "Arrange the cities in alphabetical order.",
-            "answers": ["Berlin", "London", "Paris"],
-            "correctSequence": ["Berlin", "London", "Paris"]
+            "answers": ["Berlin", "-London", "Paris"],
+            "correctSequence": ["Berlin", "Paris"],
+            "questionNumber": 1
         },
         {
             "text": "Arrange the planets in order from closest to farthest from the sun.",
             "answers": ["Mars", "Earth", "Jupiter"],
-            "correctSequence": ["Earth", "Mars", "Jupiter"]
+            "correctSequence": ["Earth", "Mars", "Jupiter"],
+            "questionNumber": 2
         }
     ]
 }
