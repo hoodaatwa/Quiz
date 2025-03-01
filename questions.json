@@ -848,6 +848,100 @@
             ],
             "correctSequence": ["SELECT * FROM fish WHERE is_fresh = true;"],
             "questionNumber": 90
+        },{
+            "text": "You want to document the types of insects you find. Arrange the SQL keywords in the correct order to retrieve the 'insect_name' column from the 'insects' table.",
+            "answers": ["FROM", "SELECT", "insects", "insect_name"],
+            "correctSequence": ["SELECT", "insect_name", "FROM", "insects"],
+            "questionNumber": 91
+        },
+        {
+            "text": "To keep track of the edible plants, you need to log your findings. Identify the correct SQL statement to retrieve all rows from the 'plants' table where 'is_edible' is true.",
+            "answers": [
+                "SELECT * FROM plants WHERE is_edible = true;",
+                "SELECT plants FROM * WHERE is_edible = true;",
+                "RETRIEVE * FROM plants WHERE is_edible = true;",
+                "GET * FROM plants WHERE is_edible = true;"
+            ],
+            "correctSequence": ["SELECT * FROM plants WHERE is_edible = true;"],
+            "questionNumber": 92
+        },
+        {
+            "text": "You want to document the different types of animals you find. Arrange the SQL keywords in the correct order to insert a new row into the 'animals' table with values ('Rabbit', 'Seen').",
+            "answers": ["INTO", "INSERT", "animals", "VALUES", "('Rabbit', 'Seen')"],
+            "correctSequence": ["INSERT", "INTO", "animals", "VALUES", "('Rabbit', 'Seen')"],
+            "questionNumber": 93
+        },
+        {
+            "text": "To monitor the changes in weather, you need to create a table for weather logs. Create a new table named 'weather_log' with columns 'log_id' (integer) and 'log_text' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE weather_log (log_id INTEGER, log_text TEXT);",
+                "MAKE TABLE weather_log (log_id INT, log_text TEXT);",
+                "NEW TABLE weather_log (log_id INT, log_text TEXT);",
+                "BUILD TABLE weather_log (log_id INT, log_text TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE weather_log (log_id INTEGER, log_text TEXT);"],
+            "questionNumber": 94
+        },
+        {
+            "text": "You found an area rich in berries. Arrange the SQL keywords in the correct order to retrieve the 'berry_name' column from the 'berries' table.",
+            "answers": ["FROM", "SELECT", "berries", "berry_name"],
+            "correctSequence": ["SELECT", "berry_name", "FROM", "berries"],
+            "questionNumber": 95
+        },
+        {
+            "text": "To document your daily activities, you need to update your activity log. What is the correct SQL statement to update the log status in the 'activity_log' table to 'Completed' for today's entry?",
+            "answers": [
+                "UPDATE activity_log SET status = 'Completed' WHERE date = CURRENT_DATE;",
+                "SET status = 'Completed' WHERE date = CURRENT_DATE IN activity_log;",
+                "MODIFY activity_log SET status TO 'Completed' WHERE date = CURRENT_DATE;",
+                "CHANGE status TO 'Completed' FOR date = CURRENT_DATE IN activity_log;"
+            ],
+            "correctSequence": ["UPDATE activity_log SET status = 'Completed' WHERE date = CURRENT_DATE;"],
+            "questionNumber": 96
+        },
+        {
+            "text": "You need to document different types of fish on the island. Create a new table named 'fish' with columns 'fish_id' (integer) and 'fish_name' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE fish (fish_id INTEGER, fish_name TEXT);",
+                "MAKE TABLE fish (fish_id INT, fish_name TEXT);",
+                "NEW TABLE fish (fish_id INT, fish_name TEXT);",
+                "BUILD TABLE fish (fish_id INT, fish_name TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE fish (fish_id INTEGER, fish_name TEXT);"],
+            "questionNumber": 97
+        },
+        {
+            "text": "You want to record your daily meals. Identify the correct SQL statement to delete the entry for a spoiled meal from the 'meals' table where the meal_id is 18.",
+            "answers": [
+                "DELETE FROM meals WHERE meal_id = 18;",
+                "REMOVE FROM meals WHERE meal_id = 18;",
+                "DELETE meals WHERE meal_id = 18;",
+                "REMOVE meal_id = 18 FROM meals;"
+            ],
+            "correctSequence": ["DELETE FROM meals WHERE meal_id = 18;"],
+            "questionNumber": 98
+        },
+        {
+            "text": "You find various types of minerals on the island. Create a new table named 'minerals' with columns 'mineral_id' (integer) and 'mineral_name' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE minerals (mineral_id INTEGER, mineral_name TEXT);",
+                "MAKE TABLE minerals (mineral_id INT, mineral_name TEXT);",
+                "NEW TABLE minerals (mineral_id INT, mineral_name TEXT);",
+                "BUILD TABLE minerals (mineral_id INT, mineral_name TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE minerals (mineral_id INTEGER, mineral_name TEXT);"],
+            "questionNumber": 99
+        },
+        {
+            "text": "To document the resources you've found, you need to update the resource log. What is the correct SQL statement to select all columns from the 'resources' table where 'is_abundant' is true?",
+            "answers": [
+                "SELECT * FROM resources WHERE is_abundant = true;",
+                "SELECT resources FROM * WHERE is_abundant = true;",
+                "RETRIEVE * FROM resources WHERE is_abundant = true;",
+                "GET * FROM resources WHERE is_abundant = true;"
+            ],
+            "correctSequence": ["SELECT * FROM resources WHERE is_abundant = true;"],
+            "questionNumber": 100
         }
     ]
 }
