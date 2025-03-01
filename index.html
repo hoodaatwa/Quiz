@@ -182,6 +182,7 @@
 
         document.getElementById('next-question').addEventListener('click', function() {
             currentQuestionIndex++;
+            localStorage.setItem('currentQuestionIndex', currentQuestionIndex);
             if (currentQuestionIndex < questions.length) {
                 loadQuestion(currentQuestionIndex);
                 this.classList.add('hidden');
@@ -195,6 +196,11 @@
             .then(response => response.json())
             .then(data => {
                 questions = data.questions;
+                // Load saved question index from local storage
+                const savedIndex = localStorage.getItem('currentQuestionIndex');
+                if (savedIndex !== null) {
+                    currentQuestionIndex = parseInt(savedIndex);
+                }
                 loadQuestion(currentQuestionIndex);
             })
             .catch(error => console.error('Error fetching questions:', error));
