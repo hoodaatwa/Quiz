@@ -1,28 +1,49 @@
 {
     "questions": [
         {
-            "text": "Arrange the cities in alphabetical order.",
-            "answers": ["Berlin", "London", "Paris", "Amsterdam", "Copenhagen"],
-            "correctSequence": ["Amsterdam", "Berlin", "Copenhagen", "London", "Paris"],
+            "text": "Identify the SQL statement that retrieves all columns from the table named 'employees'.",
+            "answers": [
+                "SELECT * FROM employees;",
+                "SELECT employees FROM *;",
+                "RETRIEVE * FROM employees;",
+                "GET * FROM employees;"
+            ],
+            "correctSequence": ["SELECT * FROM employees;"],
             "questionNumber": 1
         },
         {
-            "text": "Arrange the planets in order from closest to farthest from the sun.",
-            "answers": ["Mars", "Earth", "Jupiter"],
-            "correctSequence": ["Earth", "Mars", "Jupiter"],
+            "text": "Arrange the SQL keywords in the correct order to retrieve the 'name' column from the 'customers' table.",
+            "answers": ["FROM", "SELECT", "customers", "name"],
+            "correctSequence": ["SELECT", "name", "FROM", "customers"],
             "questionNumber": 2
         },
         {
-            "text": "Arrange the colors of the rainbow in order.",
-            "answers": ["Red", "Yellow", "Green", "Blue", "Purple", "Orange"],
-            "correctSequence": ["Red", "Orange", "Yellow", "Green", "Blue", "Purple"],
+            "text": "What is the correct SQL statement to update the salary of an employee with id=1234 to 70000?",
+            "answers": [
+                "UPDATE employees SET salary = 70000 WHERE id = 1234;",
+                "SET salary = 70000 WHERE id = 1234 IN employees;",
+                "MODIFY employees SET salary TO 70000 WHERE id = 1234;",
+                "CHANGE salary TO 70000 FOR id = 1234 IN employees;"
+            ],
+            "correctSequence": ["UPDATE employees SET salary = 70000 WHERE id = 1234;"],
             "questionNumber": 3
         },
         {
-            "text": "Arrange the numbers in ascending order.",
-            "answers": ["4", "1", "3", "5", "2", "6", "7"],
-            "correctSequence": ["1", "2", "3", "4", "5", "6"],
+            "text": "Arrange the SQL keywords in the correct order to delete rows in the 'products' table where the price is less than 10.",
+            "answers": ["DELETE", "FROM", "products", "WHERE", "price", "<", "10"],
+            "correctSequence": ["DELETE", "FROM", "products", "WHERE", "price", "<", "10"],
             "questionNumber": 4
+        },
+        {
+            "text": "Which SQL statement is used to create a new table named 'orders' with columns 'id' (integer) and 'order_date' (date)?",
+            "answers": [
+                "CREATE TABLE orders (id INTEGER, order_date DATE);",
+                "MAKE TABLE orders (id INT, order_date DATE);",
+                "NEW TABLE orders (id INT, order_date DATE);",
+                "BUILD TABLE orders (id INT, order_date DATE);"
+            ],
+            "correctSequence": ["CREATE TABLE orders (id INTEGER, order_date DATE);"],
+            "questionNumber": 5
         }
     ]
 }
