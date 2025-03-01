@@ -378,6 +378,100 @@
             ],
             "correctSequence": ["CREATE TABLE weather_log (log_id INTEGER, log_details TEXT);"],
             "questionNumber": 40
+        },{
+            "text": "You find an old compass that could be useful for navigation. Arrange the SQL keywords in the correct order to retrieve the 'compass_status' column from the 'tools' table.",
+            "answers": ["FROM", "SELECT", "tools", "compass_status"],
+            "correctSequence": ["SELECT", "compass_status", "FROM", "tools"],
+            "questionNumber": 41
+        },
+        {
+            "text": "You need to record the plants you identified as edible. Identify the correct SQL statement to retrieve all rows from the 'edible_plants' table where 'is_safe' is true.",
+            "answers": [
+                "SELECT * FROM edible_plants WHERE is_safe = true;",
+                "SELECT edible_plants FROM * WHERE is_safe = true;",
+                "RETRIEVE * FROM edible_plants WHERE is_safe = true;",
+                "GET * FROM edible_plants WHERE is_safe = true;"
+            ],
+            "correctSequence": ["SELECT * FROM edible_plants WHERE is_safe = true;"],
+            "questionNumber": 42
+        },
+        {
+            "text": "You want to log the construction of a new shelter. Arrange the SQL keywords in the correct order to insert a new row into the 'shelters' table with values ('Shelter1', 'Completed').",
+            "answers": ["INTO", "INSERT", "shelters", "VALUES", "('Shelter1', 'Completed')"],
+            "correctSequence": ["INSERT", "INTO", "shelters", "VALUES", "('Shelter1', 'Completed')"],
+            "questionNumber": 43
+        },
+        {
+            "text": "To track the daily weather changes, you decide to create a table for weather conditions. Create a new table named 'weather_conditions' with columns 'condition_id' (integer) and 'condition_description' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE weather_conditions (condition_id INTEGER, condition_description TEXT);",
+                "MAKE TABLE weather_conditions (condition_id INT, condition_description TEXT);",
+                "NEW TABLE weather_conditions (condition_id INT, condition_description TEXT);",
+                "BUILD TABLE weather_conditions (condition_id INT, condition_description TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE weather_conditions (condition_id INTEGER, condition_description TEXT);"],
+            "questionNumber": 44
+        },
+        {
+            "text": "You discovered an area rich in berries. Arrange the SQL keywords in the correct order to retrieve the 'berry_type' column from the 'berries' table.",
+            "answers": ["FROM", "SELECT", "berries", "berry_type"],
+            "correctSequence": ["SELECT", "berry_type", "FROM", "berries"],
+            "questionNumber": 45
+        },
+        {
+            "text": "To document your progress, you need to update the survival log. What is the correct SQL statement to update the log status in the 'survival_log' table to 'Ongoing' for today's entry?",
+            "answers": [
+                "UPDATE survival_log SET status = 'Ongoing' WHERE date = CURRENT_DATE;",
+                "SET status = 'Ongoing' WHERE date = CURRENT_DATE IN survival_log;",
+                "MODIFY survival_log SET status TO 'Ongoing' WHERE date = CURRENT_DATE;",
+                "CHANGE status TO 'Ongoing' FOR date = CURRENT_DATE IN survival_log;"
+            ],
+            "correctSequence": ["UPDATE survival_log SET status = 'Ongoing' WHERE date = CURRENT_DATE;"],
+            "questionNumber": 46
+        },
+        {
+            "text": "You need to categorize the different types of insects on the island. Create a new table named 'insect_types' with columns 'insect_id' (integer) and 'insect_name' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE insect_types (insect_id INTEGER, insect_name TEXT);",
+                "MAKE TABLE insect_types (insect_id INT, insect_name TEXT);",
+                "NEW TABLE insect_types (insect_id INT, insect_name TEXT);",
+                "BUILD TABLE insect_types (insect_id INT, insect_name TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE insect_types (insect_id INTEGER, insect_name TEXT);"],
+            "questionNumber": 47
+        },
+        {
+            "text": "You want to record your daily meals. Identify the correct SQL statement to delete the entry for a spoiled meal from the 'meals' table where the meal_id is 8.",
+            "answers": [
+                "DELETE FROM meals WHERE meal_id = 8;",
+                "REMOVE FROM meals WHERE meal_id = 8;",
+                "DELETE meals WHERE meal_id = 8;",
+                "REMOVE meal_id = 8 FROM meals;"
+            ],
+            "correctSequence": ["DELETE FROM meals WHERE meal_id = 8;"],
+            "questionNumber": 48
+        },
+        {
+            "text": "To catalog the tools you've found, you need to update the tools log. What is the correct SQL statement to select all columns from the 'tools' table where 'is_functional' is true?",
+            "answers": [
+                "SELECT * FROM tools WHERE is_functional = true;",
+                "SELECT tools FROM * WHERE is_functional = true;",
+                "RETRIEVE * FROM tools WHERE is_functional = true;",
+                "GET * FROM tools WHERE is_functional = true;"
+            ],
+            "correctSequence": ["SELECT * FROM tools WHERE is_functional = true;"],
+            "questionNumber": 49
+        },
+        {
+            "text": "You find different kinds of shells on the beach. Create a new table named 'shells' with columns 'shell_id' (integer) and 'shell_type' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE shells (shell_id INTEGER, shell_type TEXT);",
+                "MAKE TABLE shells (shell_id INT, shell_type TEXT);",
+                "NEW TABLE shells (shell_id INT, shell_type TEXT);",
+                "BUILD TABLE shells (shell_id INT, shell_type TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE shells (shell_id INTEGER, shell_type TEXT);"],
+            "questionNumber": 50
         }
     ]
 }
