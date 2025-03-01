@@ -191,4 +191,101 @@
             "questionNumber": 20
         }
     ]
+        }, 
+        {
+            "text": "You need to catalog different types of fish found near the island. Arrange the SQL keywords in the correct order to retrieve the 'fish_name' column from the 'fishes' table.",
+            "answers": ["FROM", "SELECT", "fishes", "fish_name"],
+            "correctSequence": ["SELECT", "fish_name", "FROM", "fishes"],
+            "questionNumber": 21
+        },
+        {
+            "text": "To prepare for possible rescue, you need to log the sighting of each rescue vessel. Identify the correct SQL statement to retrieve all rows from the 'vessels' table where 'is_rescue' is true.",
+            "answers": [
+                "SELECT * FROM vessels WHERE is_rescue = true;",
+                "SELECT vessels FROM * WHERE is_rescue = true;",
+                "RETRIEVE * FROM vessels WHERE is_rescue = true;",
+                "GET * FROM vessels WHERE is_rescue = true;"
+            ],
+            "correctSequence": ["SELECT * FROM vessels WHERE is_rescue = true;"],
+            "questionNumber": 22
+        },
+        {
+            "text": "You discovered a source of fresh water. Arrange the SQL keywords in the correct order to insert a new row into the 'water_sources' table with values ('Spring', 'Fresh').",
+            "answers": ["INTO", "INSERT", "water_sources", "VALUES", "('Spring', 'Fresh')"],
+            "correctSequence": ["INSERT", "INTO", "water_sources", "VALUES", "('Spring', 'Fresh')"],
+            "questionNumber": 23
+        },
+        {
+            "text": "To ensure safety, you decide to monitor the island's weather closely. Create a new table named 'weather_monitor' with columns 'monitor_id' (integer) and 'monitor_date' (date). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE weather_monitor (monitor_id INTEGER, monitor_date DATE);",
+                "MAKE TABLE weather_monitor (monitor_id INT, monitor_date DATE);",
+                "NEW TABLE weather_monitor (monitor_id INT, monitor_date DATE);",
+                "BUILD TABLE weather_monitor (monitor_id INT, monitor_date DATE);"
+            ],
+            "correctSequence": ["CREATE TABLE weather_monitor (monitor_id INTEGER, monitor_date DATE);"],
+            "questionNumber": 24
+        },
+        {
+            "text": "While exploring the island, you find traces of previous inhabitants. Arrange the SQL keywords in the correct order to retrieve the 'artifact_name' column from the 'artifacts' table.",
+            "answers": ["FROM", "SELECT", "artifacts", "artifact_name"],
+            "correctSequence": ["SELECT", "artifact_name", "FROM", "artifacts"],
+            "questionNumber": 25
+        },
+        {
+            "text": "To keep track of daily activities, you decide to update the 'activities_log' table. What is the correct SQL statement to update the activity status to 'Completed' for today's log entry?",
+            "answers": [
+                "UPDATE activities_log SET status = 'Completed' WHERE date = CURRENT_DATE;",
+                "SET status = 'Completed' WHERE date = CURRENT_DATE IN activities_log;",
+                "MODIFY activities_log SET status TO 'Completed' WHERE date = CURRENT_DATE;",
+                "CHANGE status TO 'Completed' FOR date = CURRENT_DATE IN activities_log;"
+            ],
+            "correctSequence": ["UPDATE activities_log SET status = 'Completed' WHERE date = CURRENT_DATE;"],
+            "questionNumber": 26
+        },
+        {
+            "text": "You decide to create a database of edible plants on the island. Create a new table named 'edible_plants' with columns 'plant_id' (integer) and 'plant_name' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE edible_plants (plant_id INTEGER, plant_name TEXT);",
+                "MAKE TABLE edible_plants (plant_id INT, plant_name TEXT);",
+                "NEW TABLE edible_plants (plant_id INT, plant_name TEXT);",
+                "BUILD TABLE edible_plants (plant_id INT, plant_name TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE edible_plants (plant_id INTEGER, plant_name TEXT);"],
+            "questionNumber": 27
+        },
+        {
+            "text": "You need to delete the record of a hazardous plant you identified. Identify the correct SQL statement to delete the plant's data from the 'plants' table where the plant_id is 7.",
+            "answers": [
+                "DELETE FROM plants WHERE plant_id = 7;",
+                "REMOVE FROM plants WHERE plant_id = 7;",
+                "DELETE plants WHERE plant_id = 7;",
+                "REMOVE plant_id = 7 FROM plants;"
+            ],
+            "correctSequence": ["DELETE FROM plants WHERE plant_id = 7;"],
+            "questionNumber": 28
+        },
+        {
+            "text": "You find various types of rocks on the island. What is the correct SQL statement to select all columns from the 'rocks' table where 'is_precious' is false?",
+            "answers": [
+                "SELECT * FROM rocks WHERE is_precious = false;",
+                "SELECT rocks FROM * WHERE is_precious = false;",
+                "RETRIEVE * FROM rocks WHERE is_precious = false;",
+                "GET * FROM rocks WHERE is_precious = false;"
+            ],
+            "correctSequence": ["SELECT * FROM rocks WHERE is_precious = false;"],
+            "questionNumber": 29
+        },
+        {
+            "text": "You decide to document your survival journey. Create a new table named 'journey_log' with columns 'entry_id' (integer) and 'entry_text' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE journey_log (entry_id INTEGER, entry_text TEXT);",
+                "MAKE TABLE journey_log (entry_id INT, entry_text TEXT);",
+                "NEW TABLE journey_log (entry_id INT, entry_text TEXT);",
+                "BUILD TABLE journey_log (entry_id INT, entry_text TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE journey_log (entry_id INTEGER, entry_text TEXT);"],
+            "questionNumber": 30
         }
+    ]
+}
