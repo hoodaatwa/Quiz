@@ -472,6 +472,100 @@
             ],
             "correctSequence": ["CREATE TABLE shells (shell_id INTEGER, shell_type TEXT);"],
             "questionNumber": 50
+        },{
+            "text": "You find an old telescope that could help you spot rescue ships. Arrange the SQL keywords in the correct order to retrieve the 'telescope_status' column from the 'equipment' table.",
+            "answers": ["FROM", "SELECT", "equipment", "telescope_status"],
+            "correctSequence": ["SELECT", "telescope_status", "FROM", "equipment"],
+            "questionNumber": 51
+        },
+        {
+            "text": "You want to keep track of the fruits you find. Identify the correct SQL statement to retrieve all rows from the 'fruit_inventory' table where 'is_ripe' is true.",
+            "answers": [
+                "SELECT * FROM fruit_inventory WHERE is_ripe = true;",
+                "SELECT fruit_inventory FROM * WHERE is_ripe = true;",
+                "RETRIEVE * FROM fruit_inventory WHERE is_ripe = true;",
+                "GET * FROM fruit_inventory WHERE is_ripe = true;"
+            ],
+            "correctSequence": ["SELECT * FROM fruit_inventory WHERE is_ripe = true;"],
+            "questionNumber": 52
+        },
+        {
+            "text": "To document your findings, you decide to log different types of animals you spot. Arrange the SQL keywords in the correct order to insert a new row into the 'animals' table with values ('Deer', 'Seen').",
+            "answers": ["INTO", "INSERT", "animals", "VALUES", "('Deer', 'Seen')"],
+            "correctSequence": ["INSERT", "INTO", "animals", "VALUES", "('Deer', 'Seen')"],
+            "questionNumber": 53
+        },
+        {
+            "text": "You need to monitor weather changes to stay safe. Create a new table named 'weather_updates' with columns 'update_id' (integer) and 'update_text' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE weather_updates (update_id INTEGER, update_text TEXT);",
+                "MAKE TABLE weather_updates (update_id INT, update_text TEXT);",
+                "NEW TABLE weather_updates (update_id INT, update_text TEXT);",
+                "BUILD TABLE weather_updates (update_id INT, update_text TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE weather_updates (update_id INTEGER, update_text TEXT);"],
+            "questionNumber": 54
+        },
+        {
+            "text": "You discover a source of fresh water. Arrange the SQL keywords in the correct order to retrieve the 'water_quality' column from the 'fresh_water' table.",
+            "answers": ["FROM", "SELECT", "fresh_water", "water_quality"],
+            "correctSequence": ["SELECT", "water_quality", "FROM", "fresh_water"],
+            "questionNumber": 55
+        },
+        {
+            "text": "To keep track of your adventures, you decide to update your adventure log. What is the correct SQL statement to update the log entry in the 'adventure_log' table to 'Exciting' for today's entry?",
+            "answers": [
+                "UPDATE adventure_log SET entry = 'Exciting' WHERE date = CURRENT_DATE;",
+                "SET entry = 'Exciting' WHERE date = CURRENT_DATE IN adventure_log;",
+                "MODIFY adventure_log SET entry TO 'Exciting' WHERE date = CURRENT_DATE;",
+                "CHANGE entry TO 'Exciting' FOR date = CURRENT_DATE IN adventure_log;"
+            ],
+            "correctSequence": ["UPDATE adventure_log SET entry = 'Exciting' WHERE date = CURRENT_DATE;"],
+            "questionNumber": 56
+        },
+        {
+            "text": "You need to document different types of birds on the island. Create a new table named 'birds' with columns 'bird_id' (integer) and 'bird_name' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE birds (bird_id INTEGER, bird_name TEXT);",
+                "MAKE TABLE birds (bird_id INT, bird_name TEXT);",
+                "NEW TABLE birds (bird_id INT, bird_name TEXT);",
+                "BUILD TABLE birds (bird_id INT, bird_name TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE birds (bird_id INTEGER, bird_name TEXT);"],
+            "questionNumber": 57
+        },
+        {
+            "text": "You want to record your daily meals. Identify the correct SQL statement to delete the entry for a spoiled meal from the 'meals' table where the meal_id is 5.",
+            "answers": [
+                "DELETE FROM meals WHERE meal_id = 5;",
+                "REMOVE FROM meals WHERE meal_id = 5;",
+                "DELETE meals WHERE meal_id = 5;",
+                "REMOVE meal_id = 5 FROM meals;"
+            ],
+            "correctSequence": ["DELETE FROM meals WHERE meal_id = 5;"],
+            "questionNumber": 58
+        },
+        {
+            "text": "You find an old book with information on the island. Create a new table named 'book_log' with columns 'book_id' (integer) and 'book_title' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE book_log (book_id INTEGER, book_title TEXT);",
+                "MAKE TABLE book_log (book_id INT, book_title TEXT);",
+                "NEW TABLE book_log (book_id INT, book_title TEXT);",
+                "BUILD TABLE book_log (book_id INT, book_title TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE book_log (book_id INTEGER, book_title TEXT);"],
+            "questionNumber": 59
+        },
+        {
+            "text": "You find various kinds of shells on the beach. What is the correct SQL statement to select all columns from the 'shells' table where 'is_whole' is true?",
+            "answers": [
+                "SELECT * FROM shells WHERE is_whole = true;",
+                "SELECT shells FROM * WHERE is_whole = true;",
+                "RETRIEVE * FROM shells WHERE is_whole = true;",
+                "GET * FROM shells WHERE is_whole = true;"
+            ],
+            "correctSequence": ["SELECT * FROM shells WHERE is_whole = true;"],
+            "questionNumber": 60
         }
     ]
 }
