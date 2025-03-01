@@ -754,6 +754,100 @@
             ],
             "correctSequence": ["SELECT * FROM resources WHERE is_edible = true;"],
             "questionNumber": 80
+        },{
+            "text": "You want to record the types of animals you find. Arrange the SQL keywords in the correct order to retrieve the 'animal_name' column from the 'animals' table.",
+            "answers": ["FROM", "SELECT", "animals", "animal_name"],
+            "correctSequence": ["SELECT", "animal_name", "FROM", "animals"],
+            "questionNumber": 81
+        },
+        {
+            "text": "To keep track of your water sources, you need to log your findings. Identify the correct SQL statement to retrieve all rows from the 'water_sources' table where 'is_potable' is true.",
+            "answers": [
+                "SELECT * FROM water_sources WHERE is_potable = true;",
+                "SELECT water_sources FROM * WHERE is_potable = true;",
+                "RETRIEVE * FROM water_sources WHERE is_potable = true;",
+                "GET * FROM water_sources WHERE is_potable = true;"
+            ],
+            "correctSequence": ["SELECT * FROM water_sources WHERE is_potable = true;"],
+            "questionNumber": 82
+        },
+        {
+            "text": "You want to document the different types of trees you find. Arrange the SQL keywords in the correct order to insert a new row into the 'trees' table with values ('Oak', 'Tall').",
+            "answers": ["INTO", "INSERT", "trees", "VALUES", "('Oak', 'Tall')"],
+            "correctSequence": ["INSERT", "INTO", "trees", "VALUES", "('Oak', 'Tall')"],
+            "questionNumber": 83
+        },
+        {
+            "text": "To monitor the changes in tides, you need to create a table for tide logs. Create a new table named 'tide_log' with columns 'log_id' (integer) and 'log_details' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE tide_log (log_id INTEGER, log_details TEXT);",
+                "MAKE TABLE tide_log (log_id INT, log_details TEXT);",
+                "NEW TABLE tide_log (log_id INT, log_details TEXT);",
+                "BUILD TABLE tide_log (log_id INT, log_details TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE tide_log (log_id INTEGER, log_details TEXT);"],
+            "questionNumber": 84
+        },
+        {
+            "text": "You found an area rich in mushrooms. Arrange the SQL keywords in the correct order to retrieve the 'mushroom_type' column from the 'mushrooms' table.",
+            "answers": ["FROM", "SELECT", "mushrooms", "mushroom_type"],
+            "correctSequence": ["SELECT", "mushroom_type", "FROM", "mushrooms"],
+            "questionNumber": 85
+        },
+        {
+            "text": "To document your daily activities, you need to update your activity log. What is the correct SQL statement to update the log status in the 'activity_log' table to 'Completed' for today's entry?",
+            "answers": [
+                "UPDATE activity_log SET status = 'Completed' WHERE date = CURRENT_DATE;",
+                "SET status = 'Completed' WHERE date = CURRENT_DATE IN activity_log;",
+                "MODIFY activity_log SET status TO 'Completed' WHERE date = CURRENT_DATE;",
+                "CHANGE status TO 'Completed' FOR date = CURRENT_DATE IN activity_log;"
+            ],
+            "correctSequence": ["UPDATE activity_log SET status = 'Completed' WHERE date = CURRENT_DATE;"],
+            "questionNumber": 86
+        },
+        {
+            "text": "You need to document different types of herbs on the island. Create a new table named 'herbs' with columns 'herb_id' (integer) and 'herb_name' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE herbs (herb_id INTEGER, herb_name TEXT);",
+                "MAKE TABLE herbs (herb_id INT, herb_name TEXT);",
+                "NEW TABLE herbs (herb_id INT, herb_name TEXT);",
+                "BUILD TABLE herbs (herb_id INT, herb_name TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE herbs (herb_id INTEGER, herb_name TEXT);"],
+            "questionNumber": 87
+        },
+        {
+            "text": "You want to record your daily meals. Identify the correct SQL statement to delete the entry for a spoiled meal from the 'meals' table where the meal_id is 15.",
+            "answers": [
+                "DELETE FROM meals WHERE meal_id = 15;",
+                "REMOVE FROM meals WHERE meal_id = 15;",
+                "DELETE meals WHERE meal_id = 15;",
+                "REMOVE meal_id = 15 FROM meals;"
+            ],
+            "correctSequence": ["DELETE FROM meals WHERE meal_id = 15;"],
+            "questionNumber": 88
+        },
+        {
+            "text": "You find various types of shells on the beach. Create a new table named 'shells' with columns 'shell_id' (integer) and 'shell_type' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE shells (shell_id INTEGER, shell_type TEXT);",
+                "MAKE TABLE shells (shell_id INT, shell_type TEXT);",
+                "NEW TABLE shells (shell_id INT, shell_type TEXT);",
+                "BUILD TABLE shells (shell_id INT, shell_type TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE shells (shell_id INTEGER, shell_type TEXT);"],
+            "questionNumber": 89
+        },
+        {
+            "text": "To document the fish you've caught, you need to update the fish log. What is the correct SQL statement to select all columns from the 'fish' table where 'is_fresh' is true?",
+            "answers": [
+                "SELECT * FROM fish WHERE is_fresh = true;",
+                "SELECT fish FROM * WHERE is_fresh = true;",
+                "RETRIEVE * FROM fish WHERE is_fresh = true;",
+                "GET * FROM fish WHERE is_fresh = true;"
+            ],
+            "correctSequence": ["SELECT * FROM fish WHERE is_fresh = true;"],
+            "questionNumber": 90
         }
     ]
 }
