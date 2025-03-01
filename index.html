@@ -70,6 +70,11 @@
                 <p>Welcome to the Adventure Quiz! Follow the storyline and complete the quiz questions.</p>
                 <div id="quiz-content"></div>
                 <button id="next-question" class="hidden">Next Question</button>
+                <div>
+                    <input type="number" id="question-number-input" placeholder="Enter question number" min="1">
+                    <button id="go-to-question">Go to Question</button>
+                    <button id="restart-quiz">Restart Quiz</button>
+                </div>
             </section>
             <section id="guide-section" style="display: none;">
                 <p>This is the guide section. Here you can find tips and instructions on how to complete the quiz.</p>
@@ -101,6 +106,7 @@
             const question = questions[index];
             const questionDiv = document.createElement('div');
             questionDiv.innerHTML = `
+                <h2>Question ${index + 1}</h2>
                 <p>${question.text}</p>
             `;
             quizContent.appendChild(questionDiv);
@@ -122,7 +128,7 @@
             const droppableContainer = document.createElement('div');
             droppableContainer.className = 'droppable-container';
 
-            for (let i = 0; i < question.answers.length; i++) {
+            for (let i = 0; i < question.correctSequence.length; i++) {
                 const droppableDiv = document.createElement('div');
                 droppableDiv.classList.add('droppable');
                 droppableDiv.id = `question${index + 1}_${i + 1}`;
@@ -188,6 +194,23 @@
                 this.classList.add('hidden');
             } else {
                 alert('Quiz completed!');
+            }
+        });
+
+        document.getElementById('restart-quiz').addEventListener('click', function() {
+            currentQuestionIndex = 0;
+            localStorage.setItem('currentQuestionIndex', currentQuestionIndex);
+            loadQuestion(currentQuestionIndex);
+        });
+
+        document.getElementById('go-to-question').addEventListener('click', function() {
+            const questionNumber = parseInt(document.getElementById('question-number-input').value);
+            if (questionNumber >= 1 && questionNumber <= questions.length) {
+                currentQuestionIndex = questionNumber - 1;
+                localStorage.setItem('currentQuestionIndex', currentQuestionIndex);
+                loadQuestion(currentQuestionIndex);
+            } else {
+                alert('Invalid question number!');
             }
         });
 
