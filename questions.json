@@ -94,6 +94,101 @@
             ],
             "correctSequence": ["CREATE TABLE messages (message_id INTEGER, content TEXT);"],
             "questionNumber": 10
+        },
+        {
+            "text": "You discover an old radio on the island. To ensure it works, you decide to create a table called 'radio_tests' with columns 'test_id' (integer) and 'test_date' (date). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE radio_tests (test_id INTEGER, test_date DATE);",
+                "MAKE TABLE radio_tests (test_id INT, test_date DATE);",
+                "NEW TABLE radio_tests (test_id INT, test_date DATE);",
+                "BUILD TABLE radio_tests (test_id INT, test_date DATE);"
+            ],
+            "correctSequence": ["CREATE TABLE radio_tests (test_id INTEGER, test_date DATE);"],
+            "questionNumber": 11
+        },
+        {
+            "text": "You need to find out which fruits on the island are edible. Arrange the SQL keywords in the correct order to retrieve the 'fruit_name' column from the 'fruits' table.",
+            "answers": ["FROM", "SELECT", "fruits", "fruit_name"],
+            "correctSequence": ["SELECT", "fruit_name", "FROM", "fruits"],
+            "questionNumber": 12
+        },
+        {
+            "text": "To purify water, you need to know the available types of water sources. Identify the correct SQL statement to retrieve all rows from the 'water_sources' table where 'is_safe' is true.",
+            "answers": [
+                "SELECT * FROM water_sources WHERE is_safe = true;",
+                "SELECT water_sources FROM * WHERE is_safe = true;",
+                "RETRIEVE * FROM water_sources WHERE is_safe = true;",
+                "GET * FROM water_sources WHERE is_safe = true;"
+            ],
+            "correctSequence": ["SELECT * FROM water_sources WHERE is_safe = true;"],
+            "questionNumber": 13
+        },
+        {
+            "text": "You found a map with information about the island's geography. Arrange the SQL keywords in the correct order to retrieve the 'geography' column from the 'map' table.",
+            "answers": ["FROM", "SELECT", "map", "geography"],
+            "correctSequence": ["SELECT", "geography", "FROM", "map"],
+            "questionNumber": 14
+        },
+        {
+            "text": "To prepare for the night, you need to update the campfire log. What is the correct SQL statement to update the log status in the 'campfire' table to 'Lit' for the current evening?",
+            "answers": [
+                "UPDATE campfire SET status = 'Lit' WHERE date = CURRENT_DATE;",
+                "SET status = 'Lit' WHERE date = CURRENT_DATE IN campfire;",
+                "MODIFY campfire SET status TO 'Lit' WHERE date = CURRENT_DATE;",
+                "CHANGE status TO 'Lit' FOR date = CURRENT_DATE IN campfire;"
+            ],
+            "correctSequence": ["UPDATE campfire SET status = 'Lit' WHERE date = CURRENT_DATE;"],
+            "questionNumber": 15
+        },
+        {
+            "text": "You decide to document the island's wildlife. Create a new table named 'wildlife_log' with columns 'log_id' (integer) and 'log_entry' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE wildlife_log (log_id INTEGER, log_entry TEXT);",
+                "MAKE TABLE wildlife_log (log_id INT, log_entry TEXT);",
+                "NEW TABLE wildlife_log (log_id INT, log_entry TEXT);",
+                "BUILD TABLE wildlife_log (log_id INT, log_entry TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE wildlife_log (log_id INTEGER, log_entry TEXT);"],
+            "questionNumber": 16
+        },
+        {
+            "text": "While searching for food, you find a hidden vegetable garden. Arrange the SQL keywords in the correct order to insert a new row into the 'gardens' table with values ('Vegetable', 'Abundant').",
+            "answers": ["INTO", "INSERT", "gardens", "VALUES", "('Vegetable', 'Abundant')"],
+            "correctSequence": ["INSERT", "INTO", "gardens", "VALUES", "('Vegetable', 'Abundant')"],
+            "questionNumber": 17
+        },
+        {
+            "text": "You discover a broken boat on the beach. Identify the correct SQL statement to delete the boat's data from the 'boats' table where the boat_id is 5.",
+            "answers": [
+                "DELETE FROM boats WHERE boat_id = 5;",
+                "REMOVE FROM boats WHERE boat_id = 5;",
+                "DELETE boats WHERE boat_id = 5;",
+                "REMOVE boat_id = 5 FROM boats;"
+            ],
+            "correctSequence": ["DELETE FROM boats WHERE boat_id = 5;"],
+            "questionNumber": 18
+        },
+        {
+            "text": "To make a fire, you need to gather specific types of wood. What is the correct SQL statement to select all columns from the 'wood' table where 'is_dry' is true?",
+            "answers": [
+                "SELECT * FROM wood WHERE is_dry = true;",
+                "SELECT wood FROM * WHERE is_dry = true;",
+                "RETRIEVE * FROM wood WHERE is_dry = true;",
+                "GET * FROM wood WHERE is_dry = true;"
+            ],
+            "correctSequence": ["SELECT * FROM wood WHERE is_dry = true;"],
+            "questionNumber": 19
+        },
+        {
+            "text": "You find a way to communicate with passing ships. Create a new table named 'signals' with columns 'signal_id' (integer) and 'message' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE signals (signal_id INTEGER, message TEXT);",
+                "MAKE TABLE signals (signal_id INT, message TEXT);",
+                "NEW TABLE signals (signal_id INT, message TEXT);",
+                "BUILD TABLE signals (signal_id INT, message TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE signals (signal_id INTEGER, message TEXT);"],
+            "questionNumber": 20
         }
     ]
-}
+        }
