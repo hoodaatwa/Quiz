@@ -258,6 +258,7 @@
     <img src="your-pixel-art-url" alt="Loading...">
     <p>Loading questions...</p>
 </div>
+<button id="reset-level" class="hidden">Reset Level</button>
                 <button id="next-question" class="hidden">Next Question</button>
                 <div>
                     <input type="number" id="question-number-input" placeholder="Enter question number" min="1">
@@ -348,11 +349,13 @@
 
                 // Check if the answer sequence is correct
                 let correct = true;
+                let incorrectFound = false;
                 newDroppables.forEach((droppable, idx) => {
                     if (droppable.children.length > 0) {
                         const droppedAnswer = droppable.children[0].textContent;
                         if (droppedAnswer !== question.correctSequence[idx]) {
                             droppable.classList.add('incorrect');
+                            incorrectFound = true;
                             correct = false;
                         } else {
                             droppable.classList.remove('incorrect');
@@ -365,8 +368,12 @@
 
                 if (correct) {
                     document.getElementById('next-question').classList.remove('hidden');
+                    document.getElementById('reset-level').classList.add('hidden');
                 } else {
                     document.getElementById('next-question').classList.add('hidden');
+                    if (incorrectFound) {
+                        document.getElementById('reset-level').classList.remove('hidden');
+                    }
                 }
 
                 // Save progress to local storage
@@ -401,6 +408,11 @@
         } else {
             alert('Invalid question number!');
         }
+    });
+
+    // Add event listener to reset level button
+    document.getElementById('reset-level').addEventListener('click', function() {
+        loadQuestion(currentQuestionIndex);
     });
 
     // Show loader while fetching questions
