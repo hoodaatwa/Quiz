@@ -1,14 +1,14 @@
 {
     "questions": [
         {
-            "text": "What is the capital of France?",
-            "answers": ["Paris", "London", "Berlin"],
-            "correctAnswer": 0
+            "text": "Arrange the cities in alphabetical order.",
+            "answers": ["Berlin", "London", "Paris"],
+            "correctSequence": ["Berlin", "London", "Paris"]
         },
         {
-            "text": "Which planet is known as the Red Planet?",
+            "text": "Arrange the planets in order from closest to farthest from the sun.",
             "answers": ["Mars", "Earth", "Jupiter"],
-            "correctAnswer": 0
+            "correctSequence": ["Earth", "Mars", "Jupiter"]
         }
     ]
 }
