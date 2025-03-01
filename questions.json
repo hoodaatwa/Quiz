@@ -189,8 +189,6 @@
             ],
             "correctSequence": ["CREATE TABLE signals (signal_id INTEGER, message TEXT);"],
             "questionNumber": 20
-        }
-    ]
         }, 
         {
             "text": "You need to catalog different types of fish found near the island. Arrange the SQL keywords in the correct order to retrieve the 'fish_name' column from the 'fishes' table.",
@@ -286,6 +284,100 @@
             ],
             "correctSequence": ["CREATE TABLE journey_log (entry_id INTEGER, entry_text TEXT);"],
             "questionNumber": 30
+        },{
+            "text": "You find an old chest buried in the sand. Arrange the SQL keywords in the correct order to retrieve the 'chest_content' column from the 'chest' table.",
+            "answers": ["FROM", "SELECT", "chest", "chest_content"],
+            "correctSequence": ["SELECT", "chest_content", "FROM", "chest"],
+            "questionNumber": 31
+        },
+        {
+            "text": "To ensure you don't lose track of your stored items, you decide to log all the food you've found. Identify the correct SQL statement to retrieve all rows from the 'food_log' table where 'is_edible' is true.",
+            "answers": [
+                "SELECT * FROM food_log WHERE is_edible = true;",
+                "SELECT food_log FROM * WHERE is_edible = true;",
+                "RETRIEVE * FROM food_log WHERE is_edible = true;",
+                "GET * FROM food_log WHERE is_edible = true;"
+            ],
+            "correctSequence": ["SELECT * FROM food_log WHERE is_edible = true;"],
+            "questionNumber": 32
+        },
+        {
+            "text": "You found a secret waterfall. Arrange the SQL keywords in the correct order to insert a new row into the 'waterfalls' table with values ('Secret', 'Beautiful').",
+            "answers": ["INTO", "INSERT", "waterfalls", "VALUES", "('Secret', 'Beautiful')"],
+            "correctSequence": ["INSERT", "INTO", "waterfalls", "VALUES", "('Secret', 'Beautiful')"],
+            "questionNumber": 33
+        },
+        {
+            "text": "To log your daily findings, you need to update your personal journal. Create a new table named 'personal_journal' with columns 'entry_id' (integer) and 'entry_text' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE personal_journal (entry_id INTEGER, entry_text TEXT);",
+                "MAKE TABLE personal_journal (entry_id INT, entry_text TEXT);",
+                "NEW TABLE personal_journal (entry_id INT, entry_text TEXT);",
+                "BUILD TABLE personal_journal (entry_id INT, entry_text TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE personal_journal (entry_id INTEGER, entry_text TEXT);"],
+            "questionNumber": 34
+        },
+        {
+            "text": "To document the marine life near the island, you decide to update the marine life log. What is the correct SQL statement to update the log status in the 'marine_life_log' table to 'Complete' for today's entry?",
+            "answers": [
+                "UPDATE marine_life_log SET status = 'Complete' WHERE date = CURRENT_DATE;",
+                "SET status = 'Complete' WHERE date = CURRENT_DATE IN marine_life_log;",
+                "MODIFY marine_life_log SET status TO 'Complete' WHERE date = CURRENT_DATE;",
+                "CHANGE status TO 'Complete' FOR date = CURRENT_DATE IN marine_life_log;"
+            ],
+            "correctSequence": ["UPDATE marine_life_log SET status = 'Complete' WHERE date = CURRENT_DATE;"],
+            "questionNumber": 35
+        },
+        {
+            "text": "You found an abandoned hut on the island. Create a new table named 'hut_inventory' with columns 'item_id' (integer) and 'item_name' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE hut_inventory (item_id INTEGER, item_name TEXT);",
+                "MAKE TABLE hut_inventory (item_id INT, item_name TEXT);",
+                "NEW TABLE hut_inventory (item_id INT, item_name TEXT);",
+                "BUILD TABLE hut_inventory (item_id INT, item_name TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE hut_inventory (item_id INTEGER, item_name TEXT);"],
+            "questionNumber": 36
+        },
+        {
+            "text": "While scavenging, you find various types of metal. Arrange the SQL keywords in the correct order to insert a new row into the 'metals' table with values ('Iron', 'Rusty').",
+            "answers": ["INTO", "INSERT", "metals", "VALUES", "('Iron', 'Rusty')"],
+            "correctSequence": ["INSERT", "INTO", "metals", "VALUES", "('Iron', 'Rusty')"],
+            "questionNumber": 37
+        },
+        {
+            "text": "You discover an old diary. Identify the correct SQL statement to delete the diary's data from the 'diaries' table where the diary_id is 3.",
+            "answers": [
+                "DELETE FROM diaries WHERE diary_id = 3;",
+                "REMOVE FROM diaries WHERE diary_id = 3;",
+                "DELETE diaries WHERE diary_id = 3;",
+                "REMOVE diary_id = 3 FROM diaries;"
+            ],
+            "correctSequence": ["DELETE FROM diaries WHERE diary_id = 3;"],
+            "questionNumber": 38
+        },
+        {
+            "text": "You want to categorize the plants you found into medicinal and non-medicinal. What is the correct SQL statement to select all columns from the 'plants' table where 'is_medicinal' is true?",
+            "answers": [
+                "SELECT * FROM plants WHERE is_medicinal = true;",
+                "SELECT plants FROM * WHERE is_medicinal = true;",
+                "RETRIEVE * FROM plants WHERE is_medicinal = true;",
+                "GET * FROM plants WHERE is_medicinal = true;"
+            ],
+            "correctSequence": ["SELECT * FROM plants WHERE is_medicinal = true;"],
+            "questionNumber": 39
+        },
+        {
+            "text": "To record the weather conditions, you decide to update the weather log. Create a new table named 'weather_log' with columns 'log_id' (integer) and 'log_details' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE weather_log (log_id INTEGER, log_details TEXT);",
+                "MAKE TABLE weather_log (log_id INT, log_details TEXT);",
+                "NEW TABLE weather_log (log_id INT, log_details TEXT);",
+                "BUILD TABLE weather_log (log_id INT, log_details TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE weather_log (log_id INTEGER, log_details TEXT);"],
+            "questionNumber": 40
         }
     ]
 }
