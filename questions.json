@@ -1,49 +1,99 @@
 {
     "questions": [
         {
-            "text": "Identify the SQL statement that retrieves all columns from the table named 'employees'.",
+            "text": "Your plane has crashed, and you're stranded on a deserted island. To communicate with the rescue team, you find an old laptop with a database of the island's resources. You need to retrieve all the information from the 'resources' table. What SQL statement do you use?",
             "answers": [
-                "SELECT * FROM employees;",
-                "SELECT employees FROM *;",
-                "RETRIEVE * FROM employees;",
-                "GET * FROM employees;"
+                "SELECT * FROM resources;",
+                "SELECT resources FROM *;",
+                "RETRIEVE * FROM resources;",
+                "GET * FROM resources;"
             ],
-            "correctSequence": ["SELECT * FROM employees;"],
+            "correctSequence": ["SELECT * FROM resources;"],
             "questionNumber": 1
         },
         {
-            "text": "Arrange the SQL keywords in the correct order to retrieve the 'name' column from the 'customers' table.",
-            "answers": ["FROM", "SELECT", "customers", "name"],
-            "correctSequence": ["SELECT", "name", "FROM", "customers"],
+            "text": "You need to find out which plants on the island are safe to eat. Arrange the SQL keywords in the correct order to retrieve the 'plant_name' column from the 'plants' table.",
+            "answers": ["FROM", "SELECT", "plants", "plant_name"],
+            "correctSequence": ["SELECT", "plant_name", "FROM", "plants"],
             "questionNumber": 2
         },
         {
-            "text": "What is the correct SQL statement to update the salary of an employee with id=1234 to 70000?",
+            "text": "To build a shelter, you need to know the available types of wood on the island. Identify the correct SQL statement to retrieve all rows from the 'wood_types' table where 'is_available' is true.",
             "answers": [
-                "UPDATE employees SET salary = 70000 WHERE id = 1234;",
-                "SET salary = 70000 WHERE id = 1234 IN employees;",
-                "MODIFY employees SET salary TO 70000 WHERE id = 1234;",
-                "CHANGE salary TO 70000 FOR id = 1234 IN employees;"
+                "SELECT * FROM wood_types WHERE is_available = true;",
+                "SELECT wood_types FROM * WHERE is_available = true;",
+                "RETRIEVE * FROM wood_types WHERE is_available = true;",
+                "GET * FROM wood_types WHERE is_available = true;"
             ],
-            "correctSequence": ["UPDATE employees SET salary = 70000 WHERE id = 1234;"],
+            "correctSequence": ["SELECT * FROM wood_types WHERE is_available = true;"],
             "questionNumber": 3
         },
         {
-            "text": "Arrange the SQL keywords in the correct order to delete rows in the 'products' table where the price is less than 10.",
-            "answers": ["DELETE", "FROM", "products", "WHERE", "price", "<", "10"],
-            "correctSequence": ["DELETE", "FROM", "products", "WHERE", "price", "<", "10"],
+            "text": "You found a hidden cave with ancient writings about the island's history. Arrange the SQL keywords in the correct order to retrieve the 'history' column from the 'cave_writings' table.",
+            "answers": ["FROM", "SELECT", "cave_writings", "history"],
+            "correctSequence": ["SELECT", "history", "FROM", "cave_writings"],
             "questionNumber": 4
         },
         {
-            "text": "Which SQL statement is used to create a new table named 'orders' with columns 'id' (integer) and 'order_date' (date)?",
+            "text": "A storm is coming, and you need to update the island's weather database. What is the correct SQL statement to update the weather status in the 'weather' table to 'Stormy' for the current day?",
             "answers": [
-                "CREATE TABLE orders (id INTEGER, order_date DATE);",
-                "MAKE TABLE orders (id INT, order_date DATE);",
-                "NEW TABLE orders (id INT, order_date DATE);",
-                "BUILD TABLE orders (id INT, order_date DATE);"
+                "UPDATE weather SET status = 'Stormy' WHERE date = CURRENT_DATE;",
+                "SET status = 'Stormy' WHERE date = CURRENT_DATE IN weather;",
+                "MODIFY weather SET status TO 'Stormy' WHERE date = CURRENT_DATE;",
+                "CHANGE status TO 'Stormy' FOR date = CURRENT_DATE IN weather;"
             ],
-            "correctSequence": ["CREATE TABLE orders (id INTEGER, order_date DATE);"],
+            "correctSequence": ["UPDATE weather SET status = 'Stormy' WHERE date = CURRENT_DATE;"],
             "questionNumber": 5
+        },
+        {
+            "text": "To keep track of your survival progress, you decide to create a new table named 'survival_log' with columns 'log_id' (integer) and 'log_date' (date). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE survival_log (log_id INTEGER, log_date DATE);",
+                "MAKE TABLE survival_log (log_id INT, log_date DATE);",
+                "NEW TABLE survival_log (log_id INT, log_date DATE);",
+                "BUILD TABLE survival_log (log_id INT, log_date DATE);"
+            ],
+            "correctSequence": ["CREATE TABLE survival_log (log_id INTEGER, log_date DATE);"],
+            "questionNumber": 6
+        },
+        {
+            "text": "You come across a group of fellow survivors, and you want to share resources. Arrange the SQL keywords in the correct order to insert a new row into the 'resources' table with values ('Food', 20).",
+            "answers": ["INTO", "INSERT", "resources", "VALUES", "('Food', 20)"],
+            "correctSequence": ["INSERT", "INTO", "resources", "VALUES", "('Food', 20)"],
+            "questionNumber": 7
+        },
+        {
+            "text": "While exploring, you find a strange artifact that could be valuable. Identify the correct SQL statement to delete the artifact's data from the 'artifacts' table where the artifact_id is 42.",
+            "answers": [
+                "DELETE FROM artifacts WHERE artifact_id = 42;",
+                "REMOVE FROM artifacts WHERE artifact_id = 42;",
+                "DELETE artifacts WHERE artifact_id = 42;",
+                "REMOVE artifact_id = 42 FROM artifacts;"
+            ],
+            "correctSequence": ["DELETE FROM artifacts WHERE artifact_id = 42;"],
+            "questionNumber": 8
+        },
+        {
+            "text": "You need to gather data on the island's animal population. What is the correct SQL statement to select all columns from the 'animals' table where 'is_endangered' is false?",
+            "answers": [
+                "SELECT * FROM animals WHERE is_endangered = false;",
+                "SELECT animals FROM * WHERE is_endangered = false;",
+                "RETRIEVE * FROM animals WHERE is_endangered = false;",
+                "GET * FROM animals WHERE is_endangered = false;"
+            ],
+            "correctSequence": ["SELECT * FROM animals WHERE is_endangered = false;"],
+            "questionNumber": 9
+        },
+        {
+            "text": "To communicate with other survivors, you decide to create a new table named 'messages' with columns 'message_id' (integer) and 'content' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE messages (message_id INTEGER, content TEXT);",
+                "MAKE TABLE messages (message_id INT, content TEXT);",
+                "NEW TABLE messages (message_id INT, content TEXT);",
+                "BUILD TABLE messages (message_id INT, content TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE messages (message_id INTEGER, content TEXT);"],
+            "questionNumber": 10
         }
     ]
 }
