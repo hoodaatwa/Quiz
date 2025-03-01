@@ -171,6 +171,15 @@
         .hidden {
             display: none;
         }
+#loading {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#loading img {
+    width: 150px;
+    height: 150px;
+}
 
         button {
             background-color: #ff6600;
@@ -245,6 +254,10 @@
             <section id="quiz-section">
                 <p>Welcome to the Adventure Quiz! Follow the storyline and complete the quiz questions.</p>
                 <div id="quiz-content"></div>
+<div id="loading" class="hidden">
+    <img src="your-pixel-art-url" alt="Loading...">
+    <p>Loading questions...</p>
+</div>
                 <button id="next-question" class="hidden">Next Question</button>
                 <div>
                     <input type="number" id="question-number-input" placeholder="Enter question number" min="1">
@@ -262,147 +275,153 @@
     </div>
 
     <script>
-        document.getElementById('quiz-tab').addEventListener('click', function() {
-            document.getElementById('quiz-section').style.display = 'block';
-            document.getElementById('guide-section').style.display = 'none';
+    document.getElementById('quiz-tab').addEventListener('click', function() {
+        document.getElementById('quiz-section').style.display = 'block';
+        document.getElementById('guide-section').style.display = 'none';
+    });
+
+    document.getElementById('guide-tab').addEventListener('click', function() {
+        document.getElementById('quiz-section').style.display = 'none';
+        document.getElementById('guide-section').style.display = 'block';
+    });
+
+    let currentQuestionIndex = 0;
+    let questions = [];
+
+    function loadQuestion(index) {
+        const quizContent = document.getElementById('quiz-content');
+        quizContent.innerHTML = '';
+
+        const question = questions[index];
+        const questionDiv = document.createElement('div');
+        questionDiv.innerHTML = `
+            <h2>Question ${index + 1}</h2>
+            <p>${question.text}</p>
+        `;
+        quizContent.appendChild(questionDiv);
+
+        const answersContainer = document.createElement('div');
+        answersContainer.className = 'answers-container';
+
+        question.answers.forEach((answer, idx) => {
+            const answerDiv = document.createElement('div');
+            answerDiv.classList.add('draggable');
+            answerDiv.setAttribute('draggable', 'true');
+            answerDiv.id = `answer${index + 1}_${idx + 1}`;
+            answerDiv.textContent = answer;
+            answersContainer.appendChild(answerDiv);
         });
 
-        document.getElementById('guide-tab').addEventListener('click', function() {
-            document.getElementById('quiz-section').style.display = 'none';
-            document.getElementById('guide-section').style.display = 'block';
-        });
+        quizContent.appendChild(answersContainer);
 
-        let currentQuestionIndex = 0;
-        let questions = [];
+        const droppableContainer = document.createElement('div');
+        droppableContainer.className = 'droppable-container';
 
-        function loadQuestion(index) {
-            const quizContent = document.getElementById('quiz-content');
-            quizContent.innerHTML = '';
-
-            const question = questions[index];
-            const questionDiv = document.createElement('div');
-            questionDiv.innerHTML = `
-                <h2>Question ${index + 1}</h2>
-                <p>${question.text}</p>
-            `;
-            quizContent.appendChild(questionDiv);
-
-            const answersContainer = document.createElement('div');
-            answersContainer.className = 'answers-container';
-
-            question.answers.forEach((answer, idx) => {
-                const answerDiv = document.createElement('div');
-                answerDiv.classList.add('draggable');
-                answerDiv.setAttribute('draggable', 'true');
-                answerDiv.id = `answer${index + 1}_${idx + 1}`;
-                answerDiv.textContent = answer;
-                answersContainer.appendChild(answerDiv);
-            });
-
-            quizContent.appendChild(answersContainer);
-
-            const droppableContainer = document.createElement('div');
-            droppableContainer.className = 'droppable-container';
-
-            for (let i = 0; i < question.correctSequence.length; i++) {
-                const droppableDiv = document.createElement('div');
-                droppableDiv.classList.add('droppable');
-                droppableDiv.id = `question${index + 1}_${i + 1}`;
-                droppableContainer.appendChild(droppableDiv);
-            }
-
-            quizContent.appendChild(droppableContainer);
-
-            const newDraggables = document.querySelectorAll('.draggable');
-            const newDroppables = document.querySelectorAll('.droppable');
-
-            newDraggables.forEach(draggable => {
-                draggable.addEventListener('dragstart', function(event) {
-                    event.dataTransfer.setData('text', event.target.id);
-                });
-            });
-
-            newDroppables.forEach(droppable => {
-                droppable.addEventListener('dragover', function(event) {
-                    event.preventDefault();
-                });
-
-                droppable.addEventListener('drop', function(event) {
-                    event.preventDefault();
-                    const data = event.dataTransfer.getData('text');
-                    const draggableElement = document.getElementById(data);
-                    event.target.appendChild(draggableElement);
-
-                    // Check if the answer sequence is correct
-                    let correct = true;
-                    newDroppables.forEach((droppable, idx) => {
-                        if (droppable.children.length > 0) {
-                            const droppedAnswer = droppable.children[0].textContent;
-                            if (droppedAnswer !== question.correctSequence[idx]) {
-                                droppable.classList.add('incorrect');
-                                correct = false;
-                            } else {
-                                droppable.classList.remove('incorrect');
-                                droppable.classList.add('correct');
-                            }
-                        } else {
-                            correct = false;
-                        }
-                    });
-
-                    if (correct) {
-                        document.getElementById('next-question').classList.remove('hidden');
-                    } else {
-                        document.getElementById('next-question').classList.add('hidden');
-                    }
-
-                    // Save progress to local storage
-                    localStorage.setItem(event.target.id, data);
-                });
-            });
+        for (let i = 0; i < question.correctSequence.length; i++) {
+            const droppableDiv = document.createElement('div');
+            droppableDiv.classList.add('droppable');
+            droppableDiv.id = `question${index + 1}_${i + 1}`;
+            droppableContainer.appendChild(droppableDiv);
         }
 
-        document.getElementById('next-question').addEventListener('click', function() {
-            currentQuestionIndex++;
-            localStorage.setItem('currentQuestionIndex', currentQuestionIndex);
-            if (currentQuestionIndex < questions.length) {
-                loadQuestion(currentQuestionIndex);
-                this.classList.add('hidden');
-            } else {
-                alert('Quiz completed!');
-            }
+        quizContent.appendChild(droppableContainer);
+
+        const newDraggables = document.querySelectorAll('.draggable');
+        const newDroppables = document.querySelectorAll('.droppable');
+
+        newDraggables.forEach(draggable => {
+            draggable.addEventListener('dragstart', function(event) {
+                event.dataTransfer.setData('text', event.target.id);
+            });
         });
 
-        document.getElementById('restart-quiz').addEventListener('click', function() {
-            currentQuestionIndex = 0;
+        newDroppables.forEach(droppable => {
+            droppable.addEventListener('dragover', function(event) {
+                event.preventDefault();
+            });
+
+            droppable.addEventListener('drop', function(event) {
+                event.preventDefault();
+                const data = event.dataTransfer.getData('text');
+                const draggableElement = document.getElementById(data);
+                event.target.appendChild(draggableElement);
+
+                // Check if the answer sequence is correct
+                let correct = true;
+                newDroppables.forEach((droppable, idx) => {
+                    if (droppable.children.length > 0) {
+                        const droppedAnswer = droppable.children[0].textContent;
+                        if (droppedAnswer !== question.correctSequence[idx]) {
+                            droppable.classList.add('incorrect');
+                            correct = false;
+                        } else {
+                            droppable.classList.remove('incorrect');
+                            droppable.classList.add('correct');
+                        }
+                    } else {
+                        correct = false;
+                    }
+                });
+
+                if (correct) {
+                    document.getElementById('next-question').classList.remove('hidden');
+                } else {
+                    document.getElementById('next-question').classList.add('hidden');
+                }
+
+                // Save progress to local storage
+                localStorage.setItem(event.target.id, data);
+            });
+        });
+    }
+
+    document.getElementById('next-question').addEventListener('click', function() {
+        currentQuestionIndex++;
+        localStorage.setItem('currentQuestionIndex', currentQuestionIndex);
+        if (currentQuestionIndex < questions.length) {
+            loadQuestion(currentQuestionIndex);
+            this.classList.add('hidden');
+        } else {
+            alert('Quiz completed!');
+        }
+    });
+
+    document.getElementById('restart-quiz').addEventListener('click', function() {
+        currentQuestionIndex = 0;
+        localStorage.setItem('currentQuestionIndex', currentQuestionIndex);
+        loadQuestion(currentQuestionIndex);
+    });
+
+    document.getElementById('go-to-question').addEventListener('click', function() {
+        const questionNumber = parseInt(document.getElementById('question-number-input').value);
+        if (questionNumber >= 1 && questionNumber <= questions.length) {
+            currentQuestionIndex = questionNumber - 1;
             localStorage.setItem('currentQuestionIndex', currentQuestionIndex);
             loadQuestion(currentQuestionIndex);
-        });
+        } else {
+            alert('Invalid question number!');
+        }
+    });
 
-        document.getElementById('go-to-question').addEventListener('click', function() {
-            const questionNumber = parseInt(document.getElementById('question-number-input').value);
-            if (questionNumber >= 1 && questionNumber <= questions.length) {
-                currentQuestionIndex = questionNumber - 1;
-                localStorage.setItem('currentQuestionIndex', currentQuestionIndex);
-                loadQuestion(currentQuestionIndex);
-            } else {
-                alert('Invalid question number!');
+    // Show loader while fetching questions
+    document.getElementById('loading').classList.remove('hidden');
+
+    fetch('https://raw.githubusercontent.com/hoodaatwa/Quiz/main/questions.json')
+        .then(response => response.json())
+        .then(data => {
+            questions = data.questions;
+            // Load saved question index from local storage
+            const savedIndex = localStorage.getItem('currentQuestionIndex');
+            if (savedIndex !== null) {
+                currentQuestionIndex = parseInt(savedIndex);
             }
+            loadQuestion(currentQuestionIndex);
+            document.getElementById('loading').classList.add('hidden');
+        })
+        .catch(error => {
+            console.error('Error fetching questions:', error);
+            document.getElementById('loading').classList.add('hidden');
         });
-
-        // Fetch questions from JSON file
-        fetch('https://raw.githubusercontent.com/hoodaatwa/Quiz/main/questions.json')
-            .then(response => response.json())
-            .then(data => {
-                questions = data.questions;
-                // Load saved question index from local storage
-                const savedIndex = localStorage.getItem('currentQuestionIndex');
-                if (savedIndex !== null) {
-                    currentQuestionIndex = parseInt(savedIndex);
-                }
-                loadQuestion(currentQuestionIndex);
-            })
-            .catch(error => console.error('Error fetching questions:', error));
-    </script>
+</script>
 </body>
 </html> 
