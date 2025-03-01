@@ -566,6 +566,100 @@
             ],
             "correctSequence": ["SELECT * FROM shells WHERE is_whole = true;"],
             "questionNumber": 60
+        },{
+            "text": "You find an old camera that could help you document your journey. Arrange the SQL keywords in the correct order to retrieve the 'camera_status' column from the 'equipment' table.",
+            "answers": ["FROM", "SELECT", "equipment", "camera_status"],
+            "correctSequence": ["SELECT", "camera_status", "FROM", "equipment"],
+            "questionNumber": 61
+        },
+        {
+            "text": "You want to keep track of the different types of wood you find. Identify the correct SQL statement to retrieve all rows from the 'wood_inventory' table where 'is_dry' is true.",
+            "answers": [
+                "SELECT * FROM wood_inventory WHERE is_dry = true;",
+                "SELECT wood_inventory FROM * WHERE is_dry = true;",
+                "RETRIEVE * FROM wood_inventory WHERE is_dry = true;",
+                "GET * FROM wood_inventory WHERE is_dry = true;"
+            ],
+            "correctSequence": ["SELECT * FROM wood_inventory WHERE is_dry = true;"],
+            "questionNumber": 62
+        },
+        {
+            "text": "To document your findings, you decide to log different types of fish you catch. Arrange the SQL keywords in the correct order to insert a new row into the 'fish' table with values ('Tuna', 'Caught').",
+            "answers": ["INTO", "INSERT", "fish", "VALUES", "('Tuna', 'Caught')"],
+            "correctSequence": ["INSERT", "INTO", "fish", "VALUES", "('Tuna', 'Caught')"],
+            "questionNumber": 63
+        },
+        {
+            "text": "You need to monitor the tides to stay safe. Create a new table named 'tide_logs' with columns 'log_id' (integer) and 'log_entry' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE tide_logs (log_id INTEGER, log_entry TEXT);",
+                "MAKE TABLE tide_logs (log_id INT, log_entry TEXT);",
+                "NEW TABLE tide_logs (log_id INT, log_entry TEXT);",
+                "BUILD TABLE tide_logs (log_id INT, log_entry TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE tide_logs (log_id INTEGER, log_entry TEXT);"],
+            "questionNumber": 64
+        },
+        {
+            "text": "You discover a variety of plants. Arrange the SQL keywords in the correct order to retrieve the 'plant_type' column from the 'flora' table.",
+            "answers": ["FROM", "SELECT", "flora", "plant_type"],
+            "correctSequence": ["SELECT", "plant_type", "FROM", "flora"],
+            "questionNumber": 65
+        },
+        {
+            "text": "To keep track of your expeditions, you decide to update your exploration log. What is the correct SQL statement to update the log entry in the 'exploration_log' table to 'Successful' for today's entry?",
+            "answers": [
+                "UPDATE exploration_log SET entry = 'Successful' WHERE date = CURRENT_DATE;",
+                "SET entry = 'Successful' WHERE date = CURRENT_DATE IN exploration_log;",
+                "MODIFY exploration_log SET entry TO 'Successful' WHERE date = CURRENT_DATE;",
+                "CHANGE entry TO 'Successful' FOR date = CURRENT_DATE IN exploration_log;"
+            ],
+            "correctSequence": ["UPDATE exploration_log SET entry = 'Successful' WHERE date = CURRENT_DATE;"],
+            "questionNumber": 66
+        },
+        {
+            "text": "You need to document different types of insects on the island. Create a new table named 'insect_types' with columns 'insect_id' (integer) and 'insect_name' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE insect_types (insect_id INTEGER, insect_name TEXT);",
+                "MAKE TABLE insect_types (insect_id INT, insect_name TEXT);",
+                "NEW TABLE insect_types (insect_id INT, insect_name TEXT);",
+                "BUILD TABLE insect_types (insect_id INT, insect_name TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE insect_types (insect_id INTEGER, insect_name TEXT);"],
+            "questionNumber": 67
+        },
+        {
+            "text": "You want to record your daily meals. Identify the correct SQL statement to delete the entry for a spoiled meal from the 'meals' table where the meal_id is 10.",
+            "answers": [
+                "DELETE FROM meals WHERE meal_id = 10;",
+                "REMOVE FROM meals WHERE meal_id = 10;",
+                "DELETE meals WHERE meal_id = 10;",
+                "REMOVE meal_id = 10 FROM meals;"
+            ],
+            "correctSequence": ["DELETE FROM meals WHERE meal_id = 10;"],
+            "questionNumber": 68
+        },
+        {
+            "text": "You find various types of rocks on the island. Create a new table named 'rock_types' with columns 'rock_id' (integer) and 'rock_name' (text). Which SQL statement do you use?",
+            "answers": [
+                "CREATE TABLE rock_types (rock_id INTEGER, rock_name TEXT);",
+                "MAKE TABLE rock_types (rock_id INT, rock_name TEXT);",
+                "NEW TABLE rock_types (rock_id INT, rock_name TEXT);",
+                "BUILD TABLE rock_types (rock_id INT, rock_name TEXT);"
+            ],
+            "correctSequence": ["CREATE TABLE rock_types (rock_id INTEGER, rock_name TEXT);"],
+            "questionNumber": 69
+        },
+        {
+            "text": "To document the island's resources, you need to update the resource log. What is the correct SQL statement to select all columns from the 'resources' table where 'is_available' is true?",
+            "answers": [
+                "SELECT * FROM resources WHERE is_available = true;",
+                "SELECT resources FROM * WHERE is_available = true;",
+                "RETRIEVE * FROM resources WHERE is_available = true;",
+                "GET * FROM resources WHERE is_available = true;"
+            ],
+            "correctSequence": ["SELECT * FROM resources WHERE is_available = true;"],
+            "questionNumber": 70
         }
     ]
 }
