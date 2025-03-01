@@ -43,6 +43,9 @@
             border: 2px dashed #fff;
             margin: 10px auto;
         }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -59,7 +62,9 @@
         <main>
             <section id="quiz-section">
                 <p>Welcome to the Adventure Quiz! Follow the storyline and complete the quiz questions.</p>
-                <div id="quiz-content </section>
+                <div id="quiz-content"></div>
+                <button id="next-question" class="hidden">Next Question</button>
+            </section>
             <section id="guide-section" style="display: none;">
                 <p>This is the guide section. Here you can find tips and instructions on how to complete the quiz.</p>
             </section>
@@ -80,88 +85,80 @@
             document.getElementById('guide-section').style.display = 'block';
         });
 
-        const draggables = document.querySelectorAll('.draggable');
-        const droppables = document.querySelectorAll('.droppable');
+        let currentQuestionIndex = 0;
+        let questions = [];
 
-        draggables.forEach(draggable => {
-            draggable.addEventListener('dragstart', function(event) {
-                event.dataTransfer.setData('text', event.target.id);
+        function loadQuestion(index) {
+            const quizContent = document.getElementById('quiz-content');
+            quizContent.innerHTML = '';
+
+            const question = questions[index];
+            const questionDiv = document.createElement('div');
+            questionDiv.innerHTML = `
+                <p>${question.text}</p>
+                <div class="droppable" id="question${index + 1}"></div>
+            `;
+            quizContent.appendChild(questionDiv);
+
+            question.answers.forEach((answer, idx) => {
+                const answerDiv = document.createElement('div');
+                answerDiv.classList.add('draggable');
+                answerDiv.setAttribute('draggable', 'true');
+                answerDiv.id = `answer${index + 1}_${idx + 1}`;
+                answerDiv.textContent = answer;
+                quizContent.appendChild(answerDiv);
             });
-        });
 
-        droppables.forEach(droppable => {
-            droppable.addEventListener('dragover', function(event) {
-                event.preventDefault();
+            const newDraggables = document.querySelectorAll('.draggable');
+            const newDroppables = document.querySelectorAll('.droppable');
+
+            newDraggables.forEach(draggable => {
+                draggable.addEventListener('dragstart', function(event) {
+                    event.dataTransfer.setData('text', event.target.id);
+                });
             });
 
-            droppable.addEventListener('drop', function(event) {
-                event.preventDefault();
-                const data = event.dataTransfer.getData('text');
-                const draggableElement = document.getElementById(data);
-                event.target.appendChild(draggableElement);
+            newDroppables.forEach(droppable => {
+                droppable.addEventListener('dragover', function(event) {
+                    event.preventDefault();
+                });
 
-                // Save progress to local storage
-                localStorage.setItem(event.target.id, data);
+                droppable.addEventListener('drop', function(event) {
+                    event.preventDefault();
+                    const data = event.dataTransfer.getData('text');
+                    const draggableElement = document.getElementById(data);
+                    event.target.appendChild(draggableElement);
+
+                    // Check if the answer is correct
+                    const answerIndex = parseInt(data.split('_')[1]) - 1;
+                    if (question.correctAnswer === answerIndex) {
+                        document.getElementById('next-question').classList.remove('hidden');
+                    } else {
+                        alert('Wrong answer! Try again.');
+                    }
+
+                    // Save progress to local storage
+                    localStorage.setItem(event.target.id, data);
+                });
             });
-        });
+        }
 
-        // Load progress from local storage
-        droppables.forEach(droppable => {
-            const savedData = localStorage.getItem(droppable.id);
-            if (savedData) {
-                const draggableElement = document.getElementById(savedData);
-                droppable.appendChild(draggableElement);
+        document.getElementById('next-question').addEventListener('click', function() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                loadQuestion(currentQuestionIndex);
+                this.classList.add('hidden');
+            } else {
+                alert('Quiz completed!');
             }
         });
 
         // Fetch questions from JSON file
-        fetch('questions.json')
+        fetch('https://raw.githubusercontent.com/hoodaatwa/Quiz/main/questions.json')
             .then(response => response.json())
             .then(data => {
-                const quizContent = document.getElementById('quiz-content');
-                data.questions.forEach((question, index) => {
-                    const questionDiv = document.createElement('div');
-                    questionDiv.innerHTML = `
-                        <p>${question.text}</p>
-                        <div class="droppable" id="question${index + 1}"></div>
-                    `;
-                    quizContent.appendChild(questionDiv);
-
-                    question.answers.forEach((answer, idx) => {
-                        const answerDiv = document.createElement('div');
-                        answerDiv.classList.add('draggable');
-                        answerDiv.setAttribute('draggable', 'true');
-                        answerDiv.id = `answer${index + 1}_${idx + 1}`;
-                        answerDiv.textContent = answer;
-                        quizContent.appendChild(answerDiv);
-                    });
-                });
-
-                // Add event listeners to new draggables and droppables
-                const newDraggables = document.querySelectorAll('.draggable');
-                const newDroppables = document.querySelectorAll('.droppable');
-
-                newDraggables.forEach(draggable => {
-                    draggable.addEventListener('dragstart', function(event) {
-                        event.dataTransfer.setData('text', event.target.id);
-                    });
-                });
-
-                newDroppables.forEach(droppable => {
-                    droppable.addEventListener('dragover', function(event) {
-                        event.preventDefault();
-                    });
-
-                    droppable.addEventListener('drop', function(event) {
-                        event.preventDefault();
-                        const data = event.dataTransfer.getData('text');
-                        const draggableElement = document.getElementById(data);
-                        event.target.appendChild(draggableElement);
-
-                        // Save progress to local storage
-                        localStorage.setItem(event.target.id, data);
-                    });
-                });
+                questions = data.questions;
+                loadQuestion(currentQuestionIndex);
             })
             .catch(error => console.error('Error fetching questions:', error));
     </script>
