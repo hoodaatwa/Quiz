@@ -1,100 +1,124 @@
 {
     "questions": [
         {
-            "text": "Welcome to SQL Island Survival! Your plane has crash-landed on a mysterious island. The first step is to understand how to navigate the game interface. Click the 'Quiz' button in the header menu to load the quiz section.",
+            "text": "What symbol is used to represent all columns in a table?",
             "answers": [
-                "In the header menu labeled 'Quiz'"
+                "*"
             ],
-            "correctSequence": ["In the header menu labeled 'Quiz'"],
-            "questionNumber": 1
+            "correctSequence": ["*"],
+            "questionNumber": 31
         },
         {
-            "text": "To ensure you can understand and use the information provided in the game, you need to know where to find the guide section. Click the 'Guide' button in the header menu to access the guide section.",
+            "text": "Which keyword is used to create a new table?",
             "answers": [
-                "In the header menu labeled 'Guide'"
+                "CREATE TABLE"
             ],
-            "correctSequence": ["In the header menu labeled 'Guide'"],
-            "questionNumber": 2
+            "correctSequence": ["CREATE TABLE"],
+            "questionNumber": 32
         },
         {
-            "text": "The quiz section helps you learn SQL through interactive questions. To answer a question, you'll need to arrange SQL keywords in the correct order. Drag and drop the keywords into the droppable boxes.",
+            "text": "What keyword is used to add a new column to an existing table?",
             "answers": [
-                "Drag and drop the keywords into the droppable boxes"
+                "ALTER TABLE"
             ],
-            "correctSequence": ["Drag and drop the keywords into the droppable boxes"],
-            "questionNumber": 3
+            "correctSequence": ["ALTER TABLE"],
+            "questionNumber": 33
         },
         {
-            "text": "In some questions, you'll need to select the correct SQL statement from multiple choices. Click on the answer choice to select it.",
+            "text": "Which keyword is used to delete a table from the database?",
             "answers": [
-                "Click on the answer choice"
+                "DROP TABLE"
             ],
-            "correctSequence": ["Click on the answer choice"],
-            "questionNumber": 4
+            "correctSequence": ["DROP TABLE"],
+            "questionNumber": 34
         },
         {
-            "text": "To navigate through different questions, use the 'Next Question' button to move to the next question.",
+            "text": "What keyword is used to insert a new record into a table?",
             "answers": [
-                "Click the 'Next Question' button"
+                "INSERT INTO"
             ],
-            "correctSequence": ["Click the 'Next Question' button"],
-            "questionNumber": 5
+            "correctSequence": ["INSERT INTO"],
+            "questionNumber": 35
         },
         {
-            "text": "If you need to restart the quiz from the beginning, click the 'Restart Quiz' button.",
+            "text": "Which keyword is used to update existing records in a table?",
             "answers": [
-                "Click the 'Restart Quiz' button"
+                "UPDATE"
             ],
-            "correctSequence": ["Click the 'Restart Quiz' button"],
-            "questionNumber": 6
+            "correctSequence": ["UPDATE"],
+            "questionNumber": 36
         },
         {
-            "text": "Sometimes, you may want to navigate to a specific question. Enter the question number in the input box and click 'Go to Question'.",
+            "text": "What keyword is used to delete records from a table?",
             "answers": [
-                "Enter the question number in the input box and click 'Go to Question'"
+                "DELETE"
             ],
-            "correctSequence": ["Enter the question number in the input box and click 'Go to Question'"],
-            "questionNumber": 7
+            "correctSequence": ["DELETE"],
+            "questionNumber": 37
         },
         {
-            "text": "In case you make a mistake in arranging the keywords or selecting an answer, click the 'Reset Level' button to reset the current level.",
+            "text": "Which keyword is used to create an index on a table?",
             "answers": [
-                "Click the 'Reset Level' button"
+                "CREATE INDEX"
             ],
-            "correctSequence": ["Click the 'Reset Level' button"],
-            "questionNumber": 8
+            "correctSequence": ["CREATE INDEX"],
+            "questionNumber": 38
         },
         {
-            "text": "To load different sets of questions, there are buttons labeled for different JSON files. Click the 'Load Tutorial' button to load the 'tutorial.json' file.",
+            "text": "What keyword is used to remove an index from a table?",
             "answers": [
-                "Click the 'Load Tutorial' button"
+                "DROP INDEX"
             ],
-            "correctSequence": ["Click the 'Load Tutorial' button"],
-            "questionNumber": 9
+            "correctSequence": ["DROP INDEX"],
+            "questionNumber": 39
         },
         {
-            "text": "To load the main set of quiz questions, click the 'Load Questions' button.",
+            "text": "Which keyword is used to group rows that have the same values into summary rows?",
             "answers": [
-                "Click the 'Load Questions' button"
+                "GROUP BY"
             ],
-            "correctSequence": ["Click the 'Load Questions' button"],
-            "questionNumber": 10
+            "correctSequence": ["GROUP BY"],
+            "questionNumber": 40
         },
         {
-            "text": "If you want to learn some basic SQL concepts, click the 'Load Basics' button to load the 'basics.json' file.",
+            "text": "What keyword is used to filter records after a GROUP BY statement?",
             "answers": [
-                "Click the 'Load Basics' button"
+                "HAVING"
             ],
-            "correctSequence": ["Click the 'Load Basics' button"],
-            "questionNumber": 11
+            "correctSequence": ["HAVING"],
+            "questionNumber": 41
         },
         {
-            "text": "The progress of your quiz is saved automatically using local storage. Each JSON file has its own separate progress, so you can switch between tutorials, questions, and basics without losing your place.",
+            "text": "Which keyword is used to join rows from two or more tables based on a related column?",
             "answers": [
-                "Progress for each JSON file is stored separately using local storage"
+                "JOIN"
             ],
-            "correctSequence": ["Progress for each JSON file is stored separately using local storage"],
-            "questionNumber": 12
+            "correctSequence": ["JOIN"],
+            "questionNumber": 42
+        },
+        {
+            "text": "What keyword is used to combine the result-set of two or more SELECT statements without returning duplicate values?",
+            "answers": [
+                "UNION"
+            ],
+            "correctSequence": ["UNION"],
+            "questionNumber": 43
+        },
+        {
+            "text": "Which keyword is used to combine the result-set of two or more SELECT statements, including duplicate values?",
+            "answers": [
+                "UNION ALL"
+            ],
+            "correctSequence": ["UNION ALL"],
+            "questionNumber": 44
+        },
+        {
+            "text": "What keyword is used to rename a table or a column temporarily within a SELECT statement?",
+            "answers": [
+                "AS"
+            ],
+            "correctSequence": ["AS"],
+            "questionNumber": 45
         }
     ]
 }
