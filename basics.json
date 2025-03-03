@@ -1,947 +1,481 @@
 {
     "questions": [
         {
-            "text": "Your plane has crashed, and you're stranded on a deserted island. To communicate with the rescue team, you find an old laptop with a database of the island's resources. You need to retrieve all the information from the 'resources' table. What SQL statement do you use?",
+            "text": "What keyword is used to retrieve data from a database table?",
             "answers": [
-                "SELECT * FROM resources;",
-                "SELECT resources FROM *;",
-                "RETRIEVE * FROM resources;",
-                "GET * FROM resources;"
+                "SELECT"
             ],
-            "correctSequence": ["SELECT * FROM resources;"],
+            "correctSequence": ["SELECT"],
             "questionNumber": 1
         },
         {
-            "text": "You need to find out which plants on the island are safe to eat. Arrange the SQL keywords in the correct order to retrieve the 'plant_name' column from the 'plants' table.",
-            "answers": ["FROM", "SELECT", "plants", "plant_name"],
-            "correctSequence": ["SELECT", "plant_name", "FROM", "plants"],
+            "text": "What symbol is used to represent all columns in a SQL query?",
+            "answers": [
+                "*"
+            ],
+            "correctSequence": ["*"],
             "questionNumber": 2
         },
         {
-            "text": "To build a shelter, you need to know the available types of wood on the island. Identify the correct SQL statement to retrieve all rows from the 'wood_types' table where 'is_available' is true.",
+            "text": "Which keyword is used to filter records that meet a certain condition?",
             "answers": [
-                "SELECT * FROM wood_types WHERE is_available = true;",
-                "SELECT wood_types FROM * WHERE is_available = true;",
-                "RETRIEVE * FROM wood_types WHERE is_available = true;",
-                "GET * FROM wood_types WHERE is_available = true;"
+                "WHERE"
             ],
-            "correctSequence": ["SELECT * FROM wood_types WHERE is_available = true;"],
+            "correctSequence": ["WHERE"],
             "questionNumber": 3
         },
         {
-            "text": "You found a hidden cave with ancient writings about the island's history. Arrange the SQL keywords in the correct order to retrieve the 'history' column from the 'cave_writings' table.",
-            "answers": ["FROM", "SELECT", "cave_writings", "history"],
-            "correctSequence": ["SELECT", "history", "FROM", "cave_writings"],
+            "text": "What keyword is used to sort the result set in ascending or descending order?",
+            "answers": [
+                "ORDER BY"
+            ],
+            "correctSequence": ["ORDER BY"],
             "questionNumber": 4
         },
         {
-            "text": "A storm is coming, and you need to update the island's weather database. What is the correct SQL statement to update the weather status in the 'weather' table to 'Stormy' for the current day?",
+            "text": "Which keyword is used to count the number of rows in a table?",
             "answers": [
-                "UPDATE weather SET status = 'Stormy' WHERE date = CURRENT_DATE;",
-                "SET status = 'Stormy' WHERE date = CURRENT_DATE IN weather;",
-                "MODIFY weather SET status TO 'Stormy' WHERE date = CURRENT_DATE;",
-                "CHANGE status TO 'Stormy' FOR date = CURRENT_DATE IN weather;"
+                "COUNT"
             ],
-            "correctSequence": ["UPDATE weather SET status = 'Stormy' WHERE date = CURRENT_DATE;"],
+            "correctSequence": ["COUNT"],
             "questionNumber": 5
         },
         {
-            "text": "To keep track of your survival progress, you decide to create a new table named 'survival_log' with columns 'log_id' (integer) and 'log_date' (date). Which SQL statement do you use?",
+            "text": "What keyword is used to select only unique values?",
             "answers": [
-                "CREATE TABLE survival_log (log_id INTEGER, log_date DATE);",
-                "MAKE TABLE survival_log (log_id INT, log_date DATE);",
-                "NEW TABLE survival_log (log_id INT, log_date DATE);",
-                "BUILD TABLE survival_log (log_id INT, log_date DATE);"
+                "DISTINCT"
             ],
-            "correctSequence": ["CREATE TABLE survival_log (log_id INTEGER, log_date DATE);"],
+            "correctSequence": ["DISTINCT"],
             "questionNumber": 6
         },
         {
-            "text": "You come across a group of fellow survivors, and you want to share resources. Arrange the SQL keywords in the correct order to insert a new row into the 'resources' table with values ('Food', 20).",
-            "answers": ["INTO", "INSERT", "resources", "VALUES", "('Food', 20)"],
-            "correctSequence": ["INSERT", "INTO", "resources", "VALUES", "('Food', 20)"],
+            "text": "Which keyword is used to specify multiple conditions that must be true for records to be included?",
+            "answers": [
+                "AND"
+            ],
+            "correctSequence": ["AND"],
             "questionNumber": 7
         },
         {
-            "text": "While exploring, you find a strange artifact that could be valuable. Identify the correct SQL statement to delete the artifact's data from the 'artifacts' table where the artifact_id is 42.",
+            "text": "What keyword is used to specify at least one of multiple conditions must be true for records to be included?",
             "answers": [
-                "DELETE FROM artifacts WHERE artifact_id = 42;",
-                "REMOVE FROM artifacts WHERE artifact_id = 42;",
-                "DELETE artifacts WHERE artifact_id = 42;",
-                "REMOVE artifact_id = 42 FROM artifacts;"
+                "OR"
             ],
-            "correctSequence": ["DELETE FROM artifacts WHERE artifact_id = 42;"],
+            "correctSequence": ["OR"],
             "questionNumber": 8
         },
         {
-            "text": "You need to gather data on the island's animal population. What is the correct SQL statement to select all columns from the 'animals' table where 'is_endangered' is false?",
+            "text": "Which keyword is used to exclude certain results from the result set?",
             "answers": [
-                "SELECT * FROM animals WHERE is_endangered = false;",
-                "SELECT animals FROM * WHERE is_endangered = false;",
-                "RETRIEVE * FROM animals WHERE is_endangered = false;",
-                "GET * FROM animals WHERE is_endangered = false;"
+                "NOT"
             ],
-            "correctSequence": ["SELECT * FROM animals WHERE is_endangered = false;"],
+            "correctSequence": ["NOT"],
             "questionNumber": 9
         },
         {
-            "text": "To communicate with other survivors, you decide to create a new table named 'messages' with columns 'message_id' (integer) and 'content' (text). Which SQL statement do you use?",
+            "text": "What keyword is used to check for NULL values?",
             "answers": [
-                "CREATE TABLE messages (message_id INTEGER, content TEXT);",
-                "MAKE TABLE messages (message_id INT, content TEXT);",
-                "NEW TABLE messages (message_id INT, content TEXT);",
-                "BUILD TABLE messages (message_id INT, content TEXT);"
+                "IS NULL"
             ],
-            "correctSequence": ["CREATE TABLE messages (message_id INTEGER, content TEXT);"],
+            "correctSequence": ["IS NULL"],
             "questionNumber": 10
         },
         {
-            "text": "You discover an old radio on the island. To ensure it works, you decide to create a table called 'radio_tests' with columns 'test_id' (integer) and 'test_date' (date). Which SQL statement do you use?",
+            "text": "Which keyword is used to match a pattern within a column?",
             "answers": [
-                "CREATE TABLE radio_tests (test_id INTEGER, test_date DATE);",
-                "MAKE TABLE radio_tests (test_id INT, test_date DATE);",
-                "NEW TABLE radio_tests (test_id INT, test_date DATE);",
-                "BUILD TABLE radio_tests (test_id INT, test_date DATE);"
+                "LIKE"
             ],
-            "correctSequence": ["CREATE TABLE radio_tests (test_id INTEGER, test_date DATE);"],
+            "correctSequence": ["LIKE"],
             "questionNumber": 11
         },
         {
-            "text": "You need to find out which fruits on the island are edible. Arrange the SQL keywords in the correct order to retrieve the 'fruit_name' column from the 'fruits' table.",
-            "answers": ["FROM", "SELECT", "fruits", "fruit_name"],
-            "correctSequence": ["SELECT", "fruit_name", "FROM", "fruits"],
+            "text": "What keyword is used to check if a value is within a specific range?",
+            "answers": [
+                "BETWEEN"
+            ],
+            "correctSequence": ["BETWEEN"],
             "questionNumber": 12
         },
         {
-            "text": "To purify water, you need to know the available types of water sources. Identify the correct SQL statement to retrieve all rows from the 'water_sources' table where 'is_safe' is true.",
+            "text": "Which keyword is used to create a new table?",
             "answers": [
-                "SELECT * FROM water_sources WHERE is_safe = true;",
-                "SELECT water_sources FROM * WHERE is_safe = true;",
-                "RETRIEVE * FROM water_sources WHERE is_safe = true;",
-                "GET * FROM water_sources WHERE is_safe = true;"
+                "CREATE TABLE"
             ],
-            "correctSequence": ["SELECT * FROM water_sources WHERE is_safe = true;"],
+            "correctSequence": ["CREATE TABLE"],
             "questionNumber": 13
         },
         {
-            "text": "You found a map with information about the island's geography. Arrange the SQL keywords in the correct order to retrieve the 'geography' column from the 'map' table.",
-            "answers": ["FROM", "SELECT", "map", "geography"],
-            "correctSequence": ["SELECT", "geography", "FROM", "map"],
+            "text": "What keyword is used to add a new column to an existing table?",
+            "answers": [
+                "ALTER TABLE"
+            ],
+            "correctSequence": ["ALTER TABLE"],
             "questionNumber": 14
         },
         {
-            "text": "To prepare for the night, you need to update the campfire log. What is the correct SQL statement to update the log status in the 'campfire' table to 'Lit' for the current evening?",
+            "text": "Which keyword is used to delete a table from the database?",
             "answers": [
-                "UPDATE campfire SET status = 'Lit' WHERE date = CURRENT_DATE;",
-                "SET status = 'Lit' WHERE date = CURRENT_DATE IN campfire;",
-                "MODIFY campfire SET status TO 'Lit' WHERE date = CURRENT_DATE;",
-                "CHANGE status TO 'Lit' FOR date = CURRENT_DATE IN campfire;"
+                "DROP TABLE"
             ],
-            "correctSequence": ["UPDATE campfire SET status = 'Lit' WHERE date = CURRENT_DATE;"],
+            "correctSequence": ["DROP TABLE"],
             "questionNumber": 15
-        },
-        {
-            "text": "You decide to document the island's wildlife. Create a new table named 'wildlife_log' with columns 'log_id' (integer) and 'log_entry' (text). Which SQL statement do you use?",
+        },{
+            "text": "Which keyword is used to insert a new record into a table?",
             "answers": [
-                "CREATE TABLE wildlife_log (log_id INTEGER, log_entry TEXT);",
-                "MAKE TABLE wildlife_log (log_id INT, log_entry TEXT);",
-                "NEW TABLE wildlife_log (log_id INT, log_entry TEXT);",
-                "BUILD TABLE wildlife_log (log_id INT, log_entry TEXT);"
+                "INSERT INTO"
             ],
-            "correctSequence": ["CREATE TABLE wildlife_log (log_id INTEGER, log_entry TEXT);"],
+            "correctSequence": ["INSERT INTO"],
             "questionNumber": 16
         },
         {
-            "text": "While searching for food, you find a hidden vegetable garden. Arrange the SQL keywords in the correct order to insert a new row into the 'gardens' table with values ('Vegetable', 'Abundant').",
-            "answers": ["INTO", "INSERT", "gardens", "VALUES", "('Vegetable', 'Abundant')"],
-            "correctSequence": ["INSERT", "INTO", "gardens", "VALUES", "('Vegetable', 'Abundant')"],
+            "text": "What keyword is used to update existing records in a table?",
+            "answers": [
+                "UPDATE"
+            ],
+            "correctSequence": ["UPDATE"],
             "questionNumber": 17
         },
         {
-            "text": "You discover a broken boat on the beach. Identify the correct SQL statement to delete the boat's data from the 'boats' table where the boat_id is 5.",
+            "text": "Which keyword is used to delete records from a table?",
             "answers": [
-                "DELETE FROM boats WHERE boat_id = 5;",
-                "REMOVE FROM boats WHERE boat_id = 5;",
-                "DELETE boats WHERE boat_id = 5;",
-                "REMOVE boat_id = 5 FROM boats;"
+                "DELETE"
             ],
-            "correctSequence": ["DELETE FROM boats WHERE boat_id = 5;"],
+            "correctSequence": ["DELETE"],
             "questionNumber": 18
         },
         {
-            "text": "To make a fire, you need to gather specific types of wood. What is the correct SQL statement to select all columns from the 'wood' table where 'is_dry' is true?",
+            "text": "What keyword is used to create an index on a table?",
             "answers": [
-                "SELECT * FROM wood WHERE is_dry = true;",
-                "SELECT wood FROM * WHERE is_dry = true;",
-                "RETRIEVE * FROM wood WHERE is_dry = true;",
-                "GET * FROM wood WHERE is_dry = true;"
+                "CREATE INDEX"
             ],
-            "correctSequence": ["SELECT * FROM wood WHERE is_dry = true;"],
+            "correctSequence": ["CREATE INDEX"],
             "questionNumber": 19
         },
         {
-            "text": "You find a way to communicate with passing ships. Create a new table named 'signals' with columns 'signal_id' (integer) and 'message' (text). Which SQL statement do you use?",
+            "text": "Which keyword is used to remove an index from a table?",
             "answers": [
-                "CREATE TABLE signals (signal_id INTEGER, message TEXT);",
-                "MAKE TABLE signals (signal_id INT, message TEXT);",
-                "NEW TABLE signals (signal_id INT, message TEXT);",
-                "BUILD TABLE signals (signal_id INT, message TEXT);"
+                "DROP INDEX"
             ],
-            "correctSequence": ["CREATE TABLE signals (signal_id INTEGER, message TEXT);"],
+            "correctSequence": ["DROP INDEX"],
             "questionNumber": 20
-        }, 
+        },
         {
-            "text": "You need to catalog different types of fish found near the island. Arrange the SQL keywords in the correct order to retrieve the 'fish_name' column from the 'fishes' table.",
-            "answers": ["FROM", "SELECT", "fishes", "fish_name"],
-            "correctSequence": ["SELECT", "fish_name", "FROM", "fishes"],
+            "text": "What keyword is used to group rows that have the same values into summary rows?",
+            "answers": [
+                "GROUP BY"
+            ],
+            "correctSequence": ["GROUP BY"],
             "questionNumber": 21
         },
         {
-            "text": "To prepare for possible rescue, you need to log the sighting of each rescue vessel. Identify the correct SQL statement to retrieve all rows from the 'vessels' table where 'is_rescue' is true.",
+            "text": "Which keyword is used to filter records after a GROUP BY statement?",
             "answers": [
-                "SELECT * FROM vessels WHERE is_rescue = true;",
-                "SELECT vessels FROM * WHERE is_rescue = true;",
-                "RETRIEVE * FROM vessels WHERE is_rescue = true;",
-                "GET * FROM vessels WHERE is_rescue = true;"
+                "HAVING"
             ],
-            "correctSequence": ["SELECT * FROM vessels WHERE is_rescue = true;"],
+            "correctSequence": ["HAVING"],
             "questionNumber": 22
         },
         {
-            "text": "You discovered a source of fresh water. Arrange the SQL keywords in the correct order to insert a new row into the 'water_sources' table with values ('Spring', 'Fresh').",
-            "answers": ["INTO", "INSERT", "water_sources", "VALUES", "('Spring', 'Fresh')"],
-            "correctSequence": ["INSERT", "INTO", "water_sources", "VALUES", "('Spring', 'Fresh')"],
+            "text": "What keyword is used to join rows from two or more tables based on a related column?",
+            "answers": [
+                "JOIN"
+            ],
+            "correctSequence": ["JOIN"],
             "questionNumber": 23
         },
         {
-            "text": "To ensure safety, you decide to monitor the island's weather closely. Create a new table named 'weather_monitor' with columns 'monitor_id' (integer) and 'monitor_date' (date). Which SQL statement do you use?",
+            "text": "Which keyword is used to combine the result-set of two or more SELECT statements without returning duplicate values?",
             "answers": [
-                "CREATE TABLE weather_monitor (monitor_id INTEGER, monitor_date DATE);",
-                "MAKE TABLE weather_monitor (monitor_id INT, monitor_date DATE);",
-                "NEW TABLE weather_monitor (monitor_id INT, monitor_date DATE);",
-                "BUILD TABLE weather_monitor (monitor_id INT, monitor_date DATE);"
+                "UNION"
             ],
-            "correctSequence": ["CREATE TABLE weather_monitor (monitor_id INTEGER, monitor_date DATE);"],
+            "correctSequence": ["UNION"],
             "questionNumber": 24
         },
         {
-            "text": "While exploring the island, you find traces of previous inhabitants. Arrange the SQL keywords in the correct order to retrieve the 'artifact_name' column from the 'artifacts' table.",
-            "answers": ["FROM", "SELECT", "artifacts", "artifact_name"],
-            "correctSequence": ["SELECT", "artifact_name", "FROM", "artifacts"],
+            "text": "What keyword is used to combine the result-set of two or more SELECT statements, including duplicate values?",
+            "answers": [
+                "UNION ALL"
+            ],
+            "correctSequence": ["UNION ALL"],
             "questionNumber": 25
         },
         {
-            "text": "To keep track of daily activities, you decide to update the 'activities_log' table. What is the correct SQL statement to update the activity status to 'Completed' for today's log entry?",
+            "text": "Which keyword is used to retrieve data from a table based on a related column in another table?",
             "answers": [
-                "UPDATE activities_log SET status = 'Completed' WHERE date = CURRENT_DATE;",
-                "SET status = 'Completed' WHERE date = CURRENT_DATE IN activities_log;",
-                "MODIFY activities_log SET status TO 'Completed' WHERE date = CURRENT_DATE;",
-                "CHANGE status TO 'Completed' FOR date = CURRENT_DATE IN activities_log;"
+                "INNER JOIN"
             ],
-            "correctSequence": ["UPDATE activities_log SET status = 'Completed' WHERE date = CURRENT_DATE;"],
+            "correctSequence": ["INNER JOIN"],
             "questionNumber": 26
         },
         {
-            "text": "You decide to create a database of edible plants on the island. Create a new table named 'edible_plants' with columns 'plant_id' (integer) and 'plant_name' (text). Which SQL statement do you use?",
+            "text": "What keyword is used to retrieve all rows from the left table and the matched rows from the right table?",
             "answers": [
-                "CREATE TABLE edible_plants (plant_id INTEGER, plant_name TEXT);",
-                "MAKE TABLE edible_plants (plant_id INT, plant_name TEXT);",
-                "NEW TABLE edible_plants (plant_id INT, plant_name TEXT);",
-                "BUILD TABLE edible_plants (plant_id INT, plant_name TEXT);"
+                "LEFT JOIN"
             ],
-            "correctSequence": ["CREATE TABLE edible_plants (plant_id INTEGER, plant_name TEXT);"],
+            "correctSequence": ["LEFT JOIN"],
             "questionNumber": 27
         },
         {
-            "text": "You need to delete the record of a hazardous plant you identified. Identify the correct SQL statement to delete the plant's data from the 'plants' table where the plant_id is 7.",
+            "text": "Which keyword is used to retrieve all rows from the right table and the matched rows from the left table?",
             "answers": [
-                "DELETE FROM plants WHERE plant_id = 7;",
-                "REMOVE FROM plants WHERE plant_id = 7;",
-                "DELETE plants WHERE plant_id = 7;",
-                "REMOVE plant_id = 7 FROM plants;"
+                "RIGHT JOIN"
             ],
-            "correctSequence": ["DELETE FROM plants WHERE plant_id = 7;"],
+            "correctSequence": ["RIGHT JOIN"],
             "questionNumber": 28
         },
         {
-            "text": "You find various types of rocks on the island. What is the correct SQL statement to select all columns from the 'rocks' table where 'is_precious' is false?",
+            "text": "What keyword is used to retrieve all rows when there is a match in either left or right table records?",
             "answers": [
-                "SELECT * FROM rocks WHERE is_precious = false;",
-                "SELECT rocks FROM * WHERE is_precious = false;",
-                "RETRIEVE * FROM rocks WHERE is_precious = false;",
-                "GET * FROM rocks WHERE is_precious = false;"
+                "FULL JOIN"
             ],
-            "correctSequence": ["SELECT * FROM rocks WHERE is_precious = false;"],
+            "correctSequence": ["FULL JOIN"],
             "questionNumber": 29
         },
         {
-            "text": "You decide to document your survival journey. Create a new table named 'journey_log' with columns 'entry_id' (integer) and 'entry_text' (text). Which SQL statement do you use?",
+            "text": "Which keyword is used to rename a table or a column temporarily within a SELECT statement?",
             "answers": [
-                "CREATE TABLE journey_log (entry_id INTEGER, entry_text TEXT);",
-                "MAKE TABLE journey_log (entry_id INT, entry_text TEXT);",
-                "NEW TABLE journey_log (entry_id INT, entry_text TEXT);",
-                "BUILD TABLE journey_log (entry_id INT, entry_text TEXT);"
+                "AS"
             ],
-            "correctSequence": ["CREATE TABLE journey_log (entry_id INTEGER, entry_text TEXT);"],
+            "correctSequence": ["AS"],
             "questionNumber": 30
         },{
-            "text": "You find an old chest buried in the sand. Arrange the SQL keywords in the correct order to retrieve the 'chest_content' column from the 'chest' table.",
-            "answers": ["FROM", "SELECT", "chest", "chest_content"],
-            "correctSequence": ["SELECT", "chest_content", "FROM", "chest"],
+            "text": "Which keyword is used to insert a new record into a table?",
+            "answers": [
+                "INSERT INTO"
+            ],
+            "correctSequence": ["INSERT INTO"],
+            "questionNumber": 16
+        },
+        {
+            "text": "What keyword is used to update existing records in a table?",
+            "answers": [
+                "UPDATE"
+            ],
+            "correctSequence": ["UPDATE"],
+            "questionNumber": 17
+        },
+        {
+            "text": "Which keyword is used to delete records from a table?",
+            "answers": [
+                "DELETE"
+            ],
+            "correctSequence": ["DELETE"],
+            "questionNumber": 18
+        },
+        {
+            "text": "What keyword is used to create an index on a table?",
+            "answers": [
+                "CREATE INDEX"
+            ],
+            "correctSequence": ["CREATE INDEX"],
+            "questionNumber": 19
+        },
+        {
+            "text": "Which keyword is used to remove an index from a table?",
+            "answers": [
+                "DROP INDEX"
+            ],
+            "correctSequence": ["DROP INDEX"],
+            "questionNumber": 20
+        },
+        {
+            "text": "What keyword is used to group rows that have the same values into summary rows?",
+            "answers": [
+                "GROUP BY"
+            ],
+            "correctSequence": ["GROUP BY"],
+            "questionNumber": 21
+        },
+        {
+            "text": "Which keyword is used to filter records after a GROUP BY statement?",
+            "answers": [
+                "HAVING"
+            ],
+            "correctSequence": ["HAVING"],
+            "questionNumber": 22
+        },
+        {
+            "text": "What keyword is used to join rows from two or more tables based on a related column?",
+            "answers": [
+                "JOIN"
+            ],
+            "correctSequence": ["JOIN"],
+            "questionNumber": 23
+        },
+        {
+            "text": "Which keyword is used to combine the result-set of two or more SELECT statements without returning duplicate values?",
+            "answers": [
+                "UNION"
+            ],
+            "correctSequence": ["UNION"],
+            "questionNumber": 24
+        },
+        {
+            "text": "What keyword is used to combine the result-set of two or more SELECT statements, including duplicate values?",
+            "answers": [
+                "UNION ALL"
+            ],
+            "correctSequence": ["UNION ALL"],
+            "questionNumber": 25
+        },
+        {
+            "text": "Which keyword is used to retrieve data from a table based on a related column in another table?",
+            "answers": [
+                "INNER JOIN"
+            ],
+            "correctSequence": ["INNER JOIN"],
+            "questionNumber": 26
+        },
+        {
+            "text": "What keyword is used to retrieve all rows from the left table and the matched rows from the right table?",
+            "answers": [
+                "LEFT JOIN"
+            ],
+            "correctSequence": ["LEFT JOIN"],
+            "questionNumber": 27
+        },
+        {
+            "text": "Which keyword is used to retrieve all rows from the right table and the matched rows from the left table?",
+            "answers": [
+                "RIGHT JOIN"
+            ],
+            "correctSequence": ["RIGHT JOIN"],
+            "questionNumber": 28
+        },
+        {
+            "text": "What keyword is used to retrieve all rows when there is a match in either left or right table records?",
+            "answers": [
+                "FULL JOIN"
+            ],
+            "correctSequence": ["FULL JOIN"],
+            "questionNumber": 29
+        },
+        {
+            "text": "Which keyword is used to rename a table or a column temporarily within a SELECT statement?",
+            "answers": [
+                "AS"
+            ],
+            "correctSequence": ["AS"],
+            "questionNumber": 30
+        },{
+            "text": "What symbol is used to represent all columns in a table?",
+            "answers": [
+                "*"
+            ],
+            "correctSequence": ["*"],
             "questionNumber": 31
         },
         {
-            "text": "To ensure you don't lose track of your stored items, you decide to log all the food you've found. Identify the correct SQL statement to retrieve all rows from the 'food_log' table where 'is_edible' is true.",
+            "text": "Which keyword is used to create a new table?",
             "answers": [
-                "SELECT * FROM food_log WHERE is_edible = true;",
-                "SELECT food_log FROM * WHERE is_edible = true;",
-                "RETRIEVE * FROM food_log WHERE is_edible = true;",
-                "GET * FROM food_log WHERE is_edible = true;"
+                "CREATE TABLE"
             ],
-            "correctSequence": ["SELECT * FROM food_log WHERE is_edible = true;"],
+            "correctSequence": ["CREATE TABLE"],
             "questionNumber": 32
         },
         {
-            "text": "You found a secret waterfall. Arrange the SQL keywords in the correct order to insert a new row into the 'waterfalls' table with values ('Secret', 'Beautiful').",
-            "answers": ["INTO", "INSERT", "waterfalls", "VALUES", "('Secret', 'Beautiful')"],
-            "correctSequence": ["INSERT", "INTO", "waterfalls", "VALUES", "('Secret', 'Beautiful')"],
+            "text": "What keyword is used to add a new column to an existing table?",
+            "answers": [
+                "ALTER TABLE"
+            ],
+            "correctSequence": ["ALTER TABLE"],
             "questionNumber": 33
         },
         {
-            "text": "To log your daily findings, you need to update your personal journal. Create a new table named 'personal_journal' with columns 'entry_id' (integer) and 'entry_text' (text). Which SQL statement do you use?",
+            "text": "Which keyword is used to delete a table from the database?",
             "answers": [
-                "CREATE TABLE personal_journal (entry_id INTEGER, entry_text TEXT);",
-                "MAKE TABLE personal_journal (entry_id INT, entry_text TEXT);",
-                "NEW TABLE personal_journal (entry_id INT, entry_text TEXT);",
-                "BUILD TABLE personal_journal (entry_id INT, entry_text TEXT);"
+                "DROP TABLE"
             ],
-            "correctSequence": ["CREATE TABLE personal_journal (entry_id INTEGER, entry_text TEXT);"],
+            "correctSequence": ["DROP TABLE"],
             "questionNumber": 34
         },
         {
-            "text": "To document the marine life near the island, you decide to update the marine life log. What is the correct SQL statement to update the log status in the 'marine_life_log' table to 'Complete' for today's entry?",
+            "text": "What keyword is used to insert a new record into a table?",
             "answers": [
-                "UPDATE marine_life_log SET status = 'Complete' WHERE date = CURRENT_DATE;",
-                "SET status = 'Complete' WHERE date = CURRENT_DATE IN marine_life_log;",
-                "MODIFY marine_life_log SET status TO 'Complete' WHERE date = CURRENT_DATE;",
-                "CHANGE status TO 'Complete' FOR date = CURRENT_DATE IN marine_life_log;"
+                "INSERT INTO"
             ],
-            "correctSequence": ["UPDATE marine_life_log SET status = 'Complete' WHERE date = CURRENT_DATE;"],
+            "correctSequence": ["INSERT INTO"],
             "questionNumber": 35
         },
         {
-            "text": "You found an abandoned hut on the island. Create a new table named 'hut_inventory' with columns 'item_id' (integer) and 'item_name' (text). Which SQL statement do you use?",
+            "text": "Which keyword is used to update existing records in a table?",
             "answers": [
-                "CREATE TABLE hut_inventory (item_id INTEGER, item_name TEXT);",
-                "MAKE TABLE hut_inventory (item_id INT, item_name TEXT);",
-                "NEW TABLE hut_inventory (item_id INT, item_name TEXT);",
-                "BUILD TABLE hut_inventory (item_id INT, item_name TEXT);"
+                "UPDATE"
             ],
-            "correctSequence": ["CREATE TABLE hut_inventory (item_id INTEGER, item_name TEXT);"],
+            "correctSequence": ["UPDATE"],
             "questionNumber": 36
         },
         {
-            "text": "While scavenging, you find various types of metal. Arrange the SQL keywords in the correct order to insert a new row into the 'metals' table with values ('Iron', 'Rusty').",
-            "answers": ["INTO", "INSERT", "metals", "VALUES", "('Iron', 'Rusty')"],
-            "correctSequence": ["INSERT", "INTO", "metals", "VALUES", "('Iron', 'Rusty')"],
+            "text": "What keyword is used to delete records from a table?",
+            "answers": [
+                "DELETE"
+            ],
+            "correctSequence": ["DELETE"],
             "questionNumber": 37
         },
         {
-            "text": "You discover an old diary. Identify the correct SQL statement to delete the diary's data from the 'diaries' table where the diary_id is 3.",
+            "text": "Which keyword is used to create an index on a table?",
             "answers": [
-                "DELETE FROM diaries WHERE diary_id = 3;",
-                "REMOVE FROM diaries WHERE diary_id = 3;",
-                "DELETE diaries WHERE diary_id = 3;",
-                "REMOVE diary_id = 3 FROM diaries;"
+                "CREATE INDEX"
             ],
-            "correctSequence": ["DELETE FROM diaries WHERE diary_id = 3;"],
+            "correctSequence": ["CREATE INDEX"],
             "questionNumber": 38
         },
         {
-            "text": "You want to categorize the plants you found into medicinal and non-medicinal. What is the correct SQL statement to select all columns from the 'plants' table where 'is_medicinal' is true?",
+            "text": "What keyword is used to remove an index from a table?",
             "answers": [
-                "SELECT * FROM plants WHERE is_medicinal = true;",
-                "SELECT plants FROM * WHERE is_medicinal = true;",
-                "RETRIEVE * FROM plants WHERE is_medicinal = true;",
-                "GET * FROM plants WHERE is_medicinal = true;"
+                "DROP INDEX"
             ],
-            "correctSequence": ["SELECT * FROM plants WHERE is_medicinal = true;"],
+            "correctSequence": ["DROP INDEX"],
             "questionNumber": 39
         },
         {
-            "text": "To record the weather conditions, you decide to update the weather log. Create a new table named 'weather_log' with columns 'log_id' (integer) and 'log_details' (text). Which SQL statement do you use?",
+            "text": "Which keyword is used to group rows that have the same values into summary rows?",
             "answers": [
-                "CREATE TABLE weather_log (log_id INTEGER, log_details TEXT);",
-                "MAKE TABLE weather_log (log_id INT, log_details TEXT);",
-                "NEW TABLE weather_log (log_id INT, log_details TEXT);",
-                "BUILD TABLE weather_log (log_id INT, log_details TEXT);"
+                "GROUP BY"
             ],
-            "correctSequence": ["CREATE TABLE weather_log (log_id INTEGER, log_details TEXT);"],
+            "correctSequence": ["GROUP BY"],
             "questionNumber": 40
-        },{
-            "text": "You find an old compass that could be useful for navigation. Arrange the SQL keywords in the correct order to retrieve the 'compass_status' column from the 'tools' table.",
-            "answers": ["FROM", "SELECT", "tools", "compass_status"],
-            "correctSequence": ["SELECT", "compass_status", "FROM", "tools"],
+        },
+        {
+            "text": "What keyword is used to filter records after a GROUP BY statement?",
+            "answers": [
+                "HAVING"
+            ],
+            "correctSequence": ["HAVING"],
             "questionNumber": 41
         },
         {
-            "text": "You need to record the plants you identified as edible. Identify the correct SQL statement to retrieve all rows from the 'edible_plants' table where 'is_safe' is true.",
+            "text": "Which keyword is used to join rows from two or more tables based on a related column?",
             "answers": [
-                "SELECT * FROM edible_plants WHERE is_safe = true;",
-                "SELECT edible_plants FROM * WHERE is_safe = true;",
-                "RETRIEVE * FROM edible_plants WHERE is_safe = true;",
-                "GET * FROM edible_plants WHERE is_safe = true;"
+                "JOIN"
             ],
-            "correctSequence": ["SELECT * FROM edible_plants WHERE is_safe = true;"],
+            "correctSequence": ["JOIN"],
             "questionNumber": 42
         },
         {
-            "text": "You want to log the construction of a new shelter. Arrange the SQL keywords in the correct order to insert a new row into the 'shelters' table with values ('Shelter1', 'Completed').",
-            "answers": ["INTO", "INSERT", "shelters", "VALUES", "('Shelter1', 'Completed')"],
-            "correctSequence": ["INSERT", "INTO", "shelters", "VALUES", "('Shelter1', 'Completed')"],
+            "text": "What keyword is used to combine the result-set of two or more SELECT statements without returning duplicate values?",
+            "answers": [
+                "UNION"
+            ],
+            "correctSequence": ["UNION"],
             "questionNumber": 43
         },
         {
-            "text": "To track the daily weather changes, you decide to create a table for weather conditions. Create a new table named 'weather_conditions' with columns 'condition_id' (integer) and 'condition_description' (text). Which SQL statement do you use?",
+            "text": "Which keyword is used to combine the result-set of two or more SELECT statements, including duplicate values?",
             "answers": [
-                "CREATE TABLE weather_conditions (condition_id INTEGER, condition_description TEXT);",
-                "MAKE TABLE weather_conditions (condition_id INT, condition_description TEXT);",
-                "NEW TABLE weather_conditions (condition_id INT, condition_description TEXT);",
-                "BUILD TABLE weather_conditions (condition_id INT, condition_description TEXT);"
+                "UNION ALL"
             ],
-            "correctSequence": ["CREATE TABLE weather_conditions (condition_id INTEGER, condition_description TEXT);"],
+            "correctSequence": ["UNION ALL"],
             "questionNumber": 44
         },
         {
-            "text": "You discovered an area rich in berries. Arrange the SQL keywords in the correct order to retrieve the 'berry_type' column from the 'berries' table.",
-            "answers": ["FROM", "SELECT", "berries", "berry_type"],
-            "correctSequence": ["SELECT", "berry_type", "FROM", "berries"],
+            "text": "What keyword is used to rename a table or a column temporarily within a SELECT statement?",
+            "answers": [
+                "AS"
+            ],
+            "correctSequence": ["AS"],
             "questionNumber": 45
-        },
-        {
-            "text": "To document your progress, you need to update the survival log. What is the correct SQL statement to update the log status in the 'survival_log' table to 'Ongoing' for today's entry?",
-            "answers": [
-                "UPDATE survival_log SET status = 'Ongoing' WHERE date = CURRENT_DATE;",
-                "SET status = 'Ongoing' WHERE date = CURRENT_DATE IN survival_log;",
-                "MODIFY survival_log SET status TO 'Ongoing' WHERE date = CURRENT_DATE;",
-                "CHANGE status TO 'Ongoing' FOR date = CURRENT_DATE IN survival_log;"
-            ],
-            "correctSequence": ["UPDATE survival_log SET status = 'Ongoing' WHERE date = CURRENT_DATE;"],
-            "questionNumber": 46
-        },
-        {
-            "text": "You need to categorize the different types of insects on the island. Create a new table named 'insect_types' with columns 'insect_id' (integer) and 'insect_name' (text). Which SQL statement do you use?",
-            "answers": [
-                "CREATE TABLE insect_types (insect_id INTEGER, insect_name TEXT);",
-                "MAKE TABLE insect_types (insect_id INT, insect_name TEXT);",
-                "NEW TABLE insect_types (insect_id INT, insect_name TEXT);",
-                "BUILD TABLE insect_types (insect_id INT, insect_name TEXT);"
-            ],
-            "correctSequence": ["CREATE TABLE insect_types (insect_id INTEGER, insect_name TEXT);"],
-            "questionNumber": 47
-        },
-        {
-            "text": "You want to record your daily meals. Identify the correct SQL statement to delete the entry for a spoiled meal from the 'meals' table where the meal_id is 8.",
-            "answers": [
-                "DELETE FROM meals WHERE meal_id = 8;",
-                "REMOVE FROM meals WHERE meal_id = 8;",
-                "DELETE meals WHERE meal_id = 8;",
-                "REMOVE meal_id = 8 FROM meals;"
-            ],
-            "correctSequence": ["DELETE FROM meals WHERE meal_id = 8;"],
-            "questionNumber": 48
-        },
-        {
-            "text": "To catalog the tools you've found, you need to update the tools log. What is the correct SQL statement to select all columns from the 'tools' table where 'is_functional' is true?",
-            "answers": [
-                "SELECT * FROM tools WHERE is_functional = true;",
-                "SELECT tools FROM * WHERE is_functional = true;",
-                "RETRIEVE * FROM tools WHERE is_functional = true;",
-                "GET * FROM tools WHERE is_functional = true;"
-            ],
-            "correctSequence": ["SELECT * FROM tools WHERE is_functional = true;"],
-            "questionNumber": 49
-        },
-        {
-            "text": "You find different kinds of shells on the beach. Create a new table named 'shells' with columns 'shell_id' (integer) and 'shell_type' (text). Which SQL statement do you use?",
-            "answers": [
-                "CREATE TABLE shells (shell_id INTEGER, shell_type TEXT);",
-                "MAKE TABLE shells (shell_id INT, shell_type TEXT);",
-                "NEW TABLE shells (shell_id INT, shell_type TEXT);",
-                "BUILD TABLE shells (shell_id INT, shell_type TEXT);"
-            ],
-            "correctSequence": ["CREATE TABLE shells (shell_id INTEGER, shell_type TEXT);"],
-            "questionNumber": 50
-        },{
-            "text": "You find an old telescope that could help you spot rescue ships. Arrange the SQL keywords in the correct order to retrieve the 'telescope_status' column from the 'equipment' table.",
-            "answers": ["FROM", "SELECT", "equipment", "telescope_status"],
-            "correctSequence": ["SELECT", "telescope_status", "FROM", "equipment"],
-            "questionNumber": 51
-        },
-        {
-            "text": "You want to keep track of the fruits you find. Identify the correct SQL statement to retrieve all rows from the 'fruit_inventory' table where 'is_ripe' is true.",
-            "answers": [
-                "SELECT * FROM fruit_inventory WHERE is_ripe = true;",
-                "SELECT fruit_inventory FROM * WHERE is_ripe = true;",
-                "RETRIEVE * FROM fruit_inventory WHERE is_ripe = true;",
-                "GET * FROM fruit_inventory WHERE is_ripe = true;"
-            ],
-            "correctSequence": ["SELECT * FROM fruit_inventory WHERE is_ripe = true;"],
-            "questionNumber": 52
-        },
-        {
-            "text": "To document your findings, you decide to log different types of animals you spot. Arrange the SQL keywords in the correct order to insert a new row into the 'animals' table with values ('Deer', 'Seen').",
-            "answers": ["INTO", "INSERT", "animals", "VALUES", "('Deer', 'Seen')"],
-            "correctSequence": ["INSERT", "INTO", "animals", "VALUES", "('Deer', 'Seen')"],
-            "questionNumber": 53
-        },
-        {
-            "text": "You need to monitor weather changes to stay safe. Create a new table named 'weather_updates' with columns 'update_id' (integer) and 'update_text' (text). Which SQL statement do you use?",
-            "answers": [
-                "CREATE TABLE weather_updates (update_id INTEGER, update_text TEXT);",
-                "MAKE TABLE weather_updates (update_id INT, update_text TEXT);",
-                "NEW TABLE weather_updates (update_id INT, update_text TEXT);",
-                "BUILD TABLE weather_updates (update_id INT, update_text TEXT);"
-            ],
-            "correctSequence": ["CREATE TABLE weather_updates (update_id INTEGER, update_text TEXT);"],
-            "questionNumber": 54
-        },
-        {
-            "text": "You discover a source of fresh water. Arrange the SQL keywords in the correct order to retrieve the 'water_quality' column from the 'fresh_water' table.",
-            "answers": ["FROM", "SELECT", "fresh_water", "water_quality"],
-            "correctSequence": ["SELECT", "water_quality", "FROM", "fresh_water"],
-            "questionNumber": 55
-        },
-        {
-            "text": "To keep track of your adventures, you decide to update your adventure log. What is the correct SQL statement to update the log entry in the 'adventure_log' table to 'Exciting' for today's entry?",
-            "answers": [
-                "UPDATE adventure_log SET entry = 'Exciting' WHERE date = CURRENT_DATE;",
-                "SET entry = 'Exciting' WHERE date = CURRENT_DATE IN adventure_log;",
-                "MODIFY adventure_log SET entry TO 'Exciting' WHERE date = CURRENT_DATE;",
-                "CHANGE entry TO 'Exciting' FOR date = CURRENT_DATE IN adventure_log;"
-            ],
-            "correctSequence": ["UPDATE adventure_log SET entry = 'Exciting' WHERE date = CURRENT_DATE;"],
-            "questionNumber": 56
-        },
-        {
-            "text": "You need to document different types of birds on the island. Create a new table named 'birds' with columns 'bird_id' (integer) and 'bird_name' (text). Which SQL statement do you use?",
-            "answers": [
-                "CREATE TABLE birds (bird_id INTEGER, bird_name TEXT);",
-                "MAKE TABLE birds (bird_id INT, bird_name TEXT);",
-                "NEW TABLE birds (bird_id INT, bird_name TEXT);",
-                "BUILD TABLE birds (bird_id INT, bird_name TEXT);"
-            ],
-            "correctSequence": ["CREATE TABLE birds (bird_id INTEGER, bird_name TEXT);"],
-            "questionNumber": 57
-        },
-        {
-            "text": "You want to record your daily meals. Identify the correct SQL statement to delete the entry for a spoiled meal from the 'meals' table where the meal_id is 5.",
-            "answers": [
-                "DELETE FROM meals WHERE meal_id = 5;",
-                "REMOVE FROM meals WHERE meal_id = 5;",
-                "DELETE meals WHERE meal_id = 5;",
-                "REMOVE meal_id = 5 FROM meals;"
-            ],
-            "correctSequence": ["DELETE FROM meals WHERE meal_id = 5;"],
-            "questionNumber": 58
-        },
-        {
-            "text": "You find an old book with information on the island. Create a new table named 'book_log' with columns 'book_id' (integer) and 'book_title' (text). Which SQL statement do you use?",
-            "answers": [
-                "CREATE TABLE book_log (book_id INTEGER, book_title TEXT);",
-                "MAKE TABLE book_log (book_id INT, book_title TEXT);",
-                "NEW TABLE book_log (book_id INT, book_title TEXT);",
-                "BUILD TABLE book_log (book_id INT, book_title TEXT);"
-            ],
-            "correctSequence": ["CREATE TABLE book_log (book_id INTEGER, book_title TEXT);"],
-            "questionNumber": 59
-        },
-        {
-            "text": "You find various kinds of shells on the beach. What is the correct SQL statement to select all columns from the 'shells' table where 'is_whole' is true?",
-            "answers": [
-                "SELECT * FROM shells WHERE is_whole = true;",
-                "SELECT shells FROM * WHERE is_whole = true;",
-                "RETRIEVE * FROM shells WHERE is_whole = true;",
-                "GET * FROM shells WHERE is_whole = true;"
-            ],
-            "correctSequence": ["SELECT * FROM shells WHERE is_whole = true;"],
-            "questionNumber": 60
-        },{
-            "text": "You find an old camera that could help you document your journey. Arrange the SQL keywords in the correct order to retrieve the 'camera_status' column from the 'equipment' table.",
-            "answers": ["FROM", "SELECT", "equipment", "camera_status"],
-            "correctSequence": ["SELECT", "camera_status", "FROM", "equipment"],
-            "questionNumber": 61
-        },
-        {
-            "text": "You want to keep track of the different types of wood you find. Identify the correct SQL statement to retrieve all rows from the 'wood_inventory' table where 'is_dry' is true.",
-            "answers": [
-                "SELECT * FROM wood_inventory WHERE is_dry = true;",
-                "SELECT wood_inventory FROM * WHERE is_dry = true;",
-                "RETRIEVE * FROM wood_inventory WHERE is_dry = true;",
-                "GET * FROM wood_inventory WHERE is_dry = true;"
-            ],
-            "correctSequence": ["SELECT * FROM wood_inventory WHERE is_dry = true;"],
-            "questionNumber": 62
-        },
-        {
-            "text": "To document your findings, you decide to log different types of fish you catch. Arrange the SQL keywords in the correct order to insert a new row into the 'fish' table with values ('Tuna', 'Caught').",
-            "answers": ["INTO", "INSERT", "fish", "VALUES", "('Tuna', 'Caught')"],
-            "correctSequence": ["INSERT", "INTO", "fish", "VALUES", "('Tuna', 'Caught')"],
-            "questionNumber": 63
-        },
-        {
-            "text": "You need to monitor the tides to stay safe. Create a new table named 'tide_logs' with columns 'log_id' (integer) and 'log_entry' (text). Which SQL statement do you use?",
-            "answers": [
-                "CREATE TABLE tide_logs (log_id INTEGER, log_entry TEXT);",
-                "MAKE TABLE tide_logs (log_id INT, log_entry TEXT);",
-                "NEW TABLE tide_logs (log_id INT, log_entry TEXT);",
-                "BUILD TABLE tide_logs (log_id INT, log_entry TEXT);"
-            ],
-            "correctSequence": ["CREATE TABLE tide_logs (log_id INTEGER, log_entry TEXT);"],
-            "questionNumber": 64
-        },
-        {
-            "text": "You discover a variety of plants. Arrange the SQL keywords in the correct order to retrieve the 'plant_type' column from the 'flora' table.",
-            "answers": ["FROM", "SELECT", "flora", "plant_type"],
-            "correctSequence": ["SELECT", "plant_type", "FROM", "flora"],
-            "questionNumber": 65
-        },
-        {
-            "text": "To keep track of your expeditions, you decide to update your exploration log. What is the correct SQL statement to update the log entry in the 'exploration_log' table to 'Successful' for today's entry?",
-            "answers": [
-                "UPDATE exploration_log SET entry = 'Successful' WHERE date = CURRENT_DATE;",
-                "SET entry = 'Successful' WHERE date = CURRENT_DATE IN exploration_log;",
-                "MODIFY exploration_log SET entry TO 'Successful' WHERE date = CURRENT_DATE;",
-                "CHANGE entry TO 'Successful' FOR date = CURRENT_DATE IN exploration_log;"
-            ],
-            "correctSequence": ["UPDATE exploration_log SET entry = 'Successful' WHERE date = CURRENT_DATE;"],
-            "questionNumber": 66
-        },
-        {
-            "text": "You need to document different types of insects on the island. Create a new table named 'insect_types' with columns 'insect_id' (integer) and 'insect_name' (text). Which SQL statement do you use?",
-            "answers": [
-                "CREATE TABLE insect_types (insect_id INTEGER, insect_name TEXT);",
-                "MAKE TABLE insect_types (insect_id INT, insect_name TEXT);",
-                "NEW TABLE insect_types (insect_id INT, insect_name TEXT);",
-                "BUILD TABLE insect_types (insect_id INT, insect_name TEXT);"
-            ],
-            "correctSequence": ["CREATE TABLE insect_types (insect_id INTEGER, insect_name TEXT);"],
-            "questionNumber": 67
-        },
-        {
-            "text": "You want to record your daily meals. Identify the correct SQL statement to delete the entry for a spoiled meal from the 'meals' table where the meal_id is 10.",
-            "answers": [
-                "DELETE FROM meals WHERE meal_id = 10;",
-                "REMOVE FROM meals WHERE meal_id = 10;",
-                "DELETE meals WHERE meal_id = 10;",
-                "REMOVE meal_id = 10 FROM meals;"
-            ],
-            "correctSequence": ["DELETE FROM meals WHERE meal_id = 10;"],
-            "questionNumber": 68
-        },
-        {
-            "text": "You find various types of rocks on the island. Create a new table named 'rock_types' with columns 'rock_id' (integer) and 'rock_name' (text). Which SQL statement do you use?",
-            "answers": [
-                "CREATE TABLE rock_types (rock_id INTEGER, rock_name TEXT);",
-                "MAKE TABLE rock_types (rock_id INT, rock_name TEXT);",
-                "NEW TABLE rock_types (rock_id INT, rock_name TEXT);",
-                "BUILD TABLE rock_types (rock_id INT, rock_name TEXT);"
-            ],
-            "correctSequence": ["CREATE TABLE rock_types (rock_id INTEGER, rock_name TEXT);"],
-            "questionNumber": 69
-        },
-        {
-            "text": "To document the island's resources, you need to update the resource log. What is the correct SQL statement to select all columns from the 'resources' table where 'is_available' is true?",
-            "answers": [
-                "SELECT * FROM resources WHERE is_available = true;",
-                "SELECT resources FROM * WHERE is_available = true;",
-                "RETRIEVE * FROM resources WHERE is_available = true;",
-                "GET * FROM resources WHERE is_available = true;"
-            ],
-            "correctSequence": ["SELECT * FROM resources WHERE is_available = true;"],
-            "questionNumber": 70
-        },{
-            "text": "You want to record the types of fruits you find. Arrange the SQL keywords in the correct order to retrieve the 'fruit_name' column from the 'fruits' table.",
-            "answers": ["FROM", "SELECT", "fruits", "fruit_name"],
-            "correctSequence": ["SELECT", "fruit_name", "FROM", "fruits"],
-            "questionNumber": 71
-        },
-        {
-            "text": "To keep track of your shelter construction, you need to log your progress. Identify the correct SQL statement to retrieve all rows from the 'shelter_log' table where 'is_complete' is false.",
-            "answers": [
-                "SELECT * FROM shelter_log WHERE is_complete = false;",
-                "SELECT shelter_log FROM * WHERE is_complete = false;",
-                "RETRIEVE * FROM shelter_log WHERE is_complete = false;",
-                "GET * FROM shelter_log WHERE is_complete = false;"
-            ],
-            "correctSequence": ["SELECT * FROM shelter_log WHERE is_complete = false;"],
-            "questionNumber": 72
-        },
-        {
-            "text": "You want to document the different types of berries you find. Arrange the SQL keywords in the correct order to insert a new row into the 'berries' table with values ('Strawberry', 'Ripe').",
-            "answers": ["INTO", "INSERT", "berries", "VALUES", "('Strawberry', 'Ripe')"],
-            "correctSequence": ["INSERT", "INTO", "berries", "VALUES", "('Strawberry', 'Ripe')"],
-            "questionNumber": 73
-        },
-        {
-            "text": "To monitor the changes in weather, you need to create a table for weather logs. Create a new table named 'weather_log' with columns 'log_id' (integer) and 'log_details' (text). Which SQL statement do you use?",
-            "answers": [
-                "CREATE TABLE weather_log (log_id INTEGER, log_details TEXT);",
-                "MAKE TABLE weather_log (log_id INT, log_details TEXT);",
-                "NEW TABLE weather_log (log_id INT, log_details TEXT);",
-                "BUILD TABLE weather_log (log_id INT, log_details TEXT);"
-            ],
-            "correctSequence": ["CREATE TABLE weather_log (log_id INTEGER, log_details TEXT);"],
-            "questionNumber": 74
-        },
-        {
-            "text": "You found an area rich in herbs. Arrange the SQL keywords in the correct order to retrieve the 'herb_type' column from the 'herbs' table.",
-            "answers": ["FROM", "SELECT", "herbs", "herb_type"],
-            "correctSequence": ["SELECT", "herb_type", "FROM", "herbs"],
-            "questionNumber": 75
-        },
-        {
-            "text": "To document your daily activities, you need to update your activity log. What is the correct SQL statement to update the log status in the 'activity_log' table to 'In Progress' for today's entry?",
-            "answers": [
-                "UPDATE activity_log SET status = 'In Progress' WHERE date = CURRENT_DATE;",
-                "SET status = 'In Progress' WHERE date = CURRENT_DATE IN activity_log;",
-                "MODIFY activity_log SET status TO 'In Progress' WHERE date = CURRENT_DATE;",
-                "CHANGE status TO 'In Progress' FOR date = CURRENT_DATE IN activity_log;"
-            ],
-            "correctSequence": ["UPDATE activity_log SET status = 'In Progress' WHERE date = CURRENT_DATE;"],
-            "questionNumber": 76
-        },
-        {
-            "text": "You need to document different types of insects on the island. Create a new table named 'insects' with columns 'insect_id' (integer) and 'insect_name' (text). Which SQL statement do you use?",
-            "answers": [
-                "CREATE TABLE insects (insect_id INTEGER, insect_name TEXT);",
-                "MAKE TABLE insects (insect_id INT, insect_name TEXT);",
-                "NEW TABLE insects (insect_id INT, insect_name TEXT);",
-                "BUILD TABLE insects (insect_id INT, insect_name TEXT);"
-            ],
-            "correctSequence": ["CREATE TABLE insects (insect_id INTEGER, insect_name TEXT);"],
-            "questionNumber": 77
-        },
-        {
-            "text": "You want to record your daily meals. Identify the correct SQL statement to delete the entry for a spoiled meal from the 'meals' table where the meal_id is 12.",
-            "answers": [
-                "DELETE FROM meals WHERE meal_id = 12;",
-                "REMOVE FROM meals WHERE meal_id = 12;",
-                "DELETE meals WHERE meal_id = 12;",
-                "REMOVE meal_id = 12 FROM meals;"
-            ],
-            "correctSequence": ["DELETE FROM meals WHERE meal_id = 12;"],
-            "questionNumber": 78
-        },
-        {
-            "text": "You find various types of minerals on the island. Create a new table named 'minerals' with columns 'mineral_id' (integer) and 'mineral_name' (text). Which SQL statement do you use?",
-            "answers": [
-                "CREATE TABLE minerals (mineral_id INTEGER, mineral_name TEXT);",
-                "MAKE TABLE minerals (mineral_id INT, mineral_name TEXT);",
-                "NEW TABLE minerals (mineral_id INT, mineral_name TEXT);",
-                "BUILD TABLE minerals (mineral_id INT, mineral_name TEXT);"
-            ],
-            "correctSequence": ["CREATE TABLE minerals (mineral_id INTEGER, mineral_name TEXT);"],
-            "questionNumber": 79
-        },
-        {
-            "text": "To document the resources you've found, you need to update the resource log. What is the correct SQL statement to select all columns from the 'resources' table where 'is_edible' is true?",
-            "answers": [
-                "SELECT * FROM resources WHERE is_edible = true;",
-                "SELECT resources FROM * WHERE is_edible = true;",
-                "RETRIEVE * FROM resources WHERE is_edible = true;",
-                "GET * FROM resources WHERE is_edible = true;"
-            ],
-            "correctSequence": ["SELECT * FROM resources WHERE is_edible = true;"],
-            "questionNumber": 80
-        },{
-            "text": "You want to record the types of animals you find. Arrange the SQL keywords in the correct order to retrieve the 'animal_name' column from the 'animals' table.",
-            "answers": ["FROM", "SELECT", "animals", "animal_name"],
-            "correctSequence": ["SELECT", "animal_name", "FROM", "animals"],
-            "questionNumber": 81
-        },
-        {
-            "text": "To keep track of your water sources, you need to log your findings. Identify the correct SQL statement to retrieve all rows from the 'water_sources' table where 'is_potable' is true.",
-            "answers": [
-                "SELECT * FROM water_sources WHERE is_potable = true;",
-                "SELECT water_sources FROM * WHERE is_potable = true;",
-                "RETRIEVE * FROM water_sources WHERE is_potable = true;",
-                "GET * FROM water_sources WHERE is_potable = true;"
-            ],
-            "correctSequence": ["SELECT * FROM water_sources WHERE is_potable = true;"],
-            "questionNumber": 82
-        },
-        {
-            "text": "You want to document the different types of trees you find. Arrange the SQL keywords in the correct order to insert a new row into the 'trees' table with values ('Oak', 'Tall').",
-            "answers": ["INTO", "INSERT", "trees", "VALUES", "('Oak', 'Tall')"],
-            "correctSequence": ["INSERT", "INTO", "trees", "VALUES", "('Oak', 'Tall')"],
-            "questionNumber": 83
-        },
-        {
-            "text": "To monitor the changes in tides, you need to create a table for tide logs. Create a new table named 'tide_log' with columns 'log_id' (integer) and 'log_details' (text). Which SQL statement do you use?",
-            "answers": [
-                "CREATE TABLE tide_log (log_id INTEGER, log_details TEXT);",
-                "MAKE TABLE tide_log (log_id INT, log_details TEXT);",
-                "NEW TABLE tide_log (log_id INT, log_details TEXT);",
-                "BUILD TABLE tide_log (log_id INT, log_details TEXT);"
-            ],
-            "correctSequence": ["CREATE TABLE tide_log (log_id INTEGER, log_details TEXT);"],
-            "questionNumber": 84
-        },
-        {
-            "text": "You found an area rich in mushrooms. Arrange the SQL keywords in the correct order to retrieve the 'mushroom_type' column from the 'mushrooms' table.",
-            "answers": ["FROM", "SELECT", "mushrooms", "mushroom_type"],
-            "correctSequence": ["SELECT", "mushroom_type", "FROM", "mushrooms"],
-            "questionNumber": 85
-        },
-        {
-            "text": "To document your daily activities, you need to update your activity log. What is the correct SQL statement to update the log status in the 'activity_log' table to 'Completed' for today's entry?",
-            "answers": [
-                "UPDATE activity_log SET status = 'Completed' WHERE date = CURRENT_DATE;",
-                "SET status = 'Completed' WHERE date = CURRENT_DATE IN activity_log;",
-                "MODIFY activity_log SET status TO 'Completed' WHERE date = CURRENT_DATE;",
-                "CHANGE status TO 'Completed' FOR date = CURRENT_DATE IN activity_log;"
-            ],
-            "correctSequence": ["UPDATE activity_log SET status = 'Completed' WHERE date = CURRENT_DATE;"],
-            "questionNumber": 86
-        },
-        {
-            "text": "You need to document different types of herbs on the island. Create a new table named 'herbs' with columns 'herb_id' (integer) and 'herb_name' (text). Which SQL statement do you use?",
-            "answers": [
-                "CREATE TABLE herbs (herb_id INTEGER, herb_name TEXT);",
-                "MAKE TABLE herbs (herb_id INT, herb_name TEXT);",
-                "NEW TABLE herbs (herb_id INT, herb_name TEXT);",
-                "BUILD TABLE herbs (herb_id INT, herb_name TEXT);"
-            ],
-            "correctSequence": ["CREATE TABLE herbs (herb_id INTEGER, herb_name TEXT);"],
-            "questionNumber": 87
-        },
-        {
-            "text": "You want to record your daily meals. Identify the correct SQL statement to delete the entry for a spoiled meal from the 'meals' table where the meal_id is 15.",
-            "answers": [
-                "DELETE FROM meals WHERE meal_id = 15;",
-                "REMOVE FROM meals WHERE meal_id = 15;",
-                "DELETE meals WHERE meal_id = 15;",
-                "REMOVE meal_id = 15 FROM meals;"
-            ],
-            "correctSequence": ["DELETE FROM meals WHERE meal_id = 15;"],
-            "questionNumber": 88
-        },
-        {
-            "text": "You find various types of shells on the beach. Create a new table named 'shells' with columns 'shell_id' (integer) and 'shell_type' (text). Which SQL statement do you use?",
-            "answers": [
-                "CREATE TABLE shells (shell_id INTEGER, shell_type TEXT);",
-                "MAKE TABLE shells (shell_id INT, shell_type TEXT);",
-                "NEW TABLE shells (shell_id INT, shell_type TEXT);",
-                "BUILD TABLE shells (shell_id INT, shell_type TEXT);"
-            ],
-            "correctSequence": ["CREATE TABLE shells (shell_id INTEGER, shell_type TEXT);"],
-            "questionNumber": 89
-        },
-        {
-            "text": "To document the fish you've caught, you need to update the fish log. What is the correct SQL statement to select all columns from the 'fish' table where 'is_fresh' is true?",
-            "answers": [
-                "SELECT * FROM fish WHERE is_fresh = true;",
-                "SELECT fish FROM * WHERE is_fresh = true;",
-                "RETRIEVE * FROM fish WHERE is_fresh = true;",
-                "GET * FROM fish WHERE is_fresh = true;"
-            ],
-            "correctSequence": ["SELECT * FROM fish WHERE is_fresh = true;"],
-            "questionNumber": 90
-        },{
-            "text": "You want to document the types of insects you find. Arrange the SQL keywords in the correct order to retrieve the 'insect_name' column from the 'insects' table.",
-            "answers": ["FROM", "SELECT", "insects", "insect_name"],
-            "correctSequence": ["SELECT", "insect_name", "FROM", "insects"],
-            "questionNumber": 91
-        },
-        {
-            "text": "To keep track of the edible plants, you need to log your findings. Identify the correct SQL statement to retrieve all rows from the 'plants' table where 'is_edible' is true.",
-            "answers": [
-                "SELECT * FROM plants WHERE is_edible = true;",
-                "SELECT plants FROM * WHERE is_edible = true;",
-                "RETRIEVE * FROM plants WHERE is_edible = true;",
-                "GET * FROM plants WHERE is_edible = true;"
-            ],
-            "correctSequence": ["SELECT * FROM plants WHERE is_edible = true;"],
-            "questionNumber": 92
-        },
-        {
-            "text": "You want to document the different types of animals you find. Arrange the SQL keywords in the correct order to insert a new row into the 'animals' table with values ('Rabbit', 'Seen').",
-            "answers": ["INTO", "INSERT", "animals", "VALUES", "('Rabbit', 'Seen')"],
-            "correctSequence": ["INSERT", "INTO", "animals", "VALUES", "('Rabbit', 'Seen')"],
-            "questionNumber": 93
-        },
-        {
-            "text": "To monitor the changes in weather, you need to create a table for weather logs. Create a new table named 'weather_log' with columns 'log_id' (integer) and 'log_text' (text). Which SQL statement do you use?",
-            "answers": [
-                "CREATE TABLE weather_log (log_id INTEGER, log_text TEXT);",
-                "MAKE TABLE weather_log (log_id INT, log_text TEXT);",
-                "NEW TABLE weather_log (log_id INT, log_text TEXT);",
-                "BUILD TABLE weather_log (log_id INT, log_text TEXT);"
-            ],
-            "correctSequence": ["CREATE TABLE weather_log (log_id INTEGER, log_text TEXT);"],
-            "questionNumber": 94
-        },
-        {
-            "text": "You found an area rich in berries. Arrange the SQL keywords in the correct order to retrieve the 'berry_name' column from the 'berries' table.",
-            "answers": ["FROM", "SELECT", "berries", "berry_name"],
-            "correctSequence": ["SELECT", "berry_name", "FROM", "berries"],
-            "questionNumber": 95
-        },
-        {
-            "text": "To document your daily activities, you need to update your activity log. What is the correct SQL statement to update the log status in the 'activity_log' table to 'Completed' for today's entry?",
-            "answers": [
-                "UPDATE activity_log SET status = 'Completed' WHERE date = CURRENT_DATE;",
-                "SET status = 'Completed' WHERE date = CURRENT_DATE IN activity_log;",
-                "MODIFY activity_log SET status TO 'Completed' WHERE date = CURRENT_DATE;",
-                "CHANGE status TO 'Completed' FOR date = CURRENT_DATE IN activity_log;"
-            ],
-            "correctSequence": ["UPDATE activity_log SET status = 'Completed' WHERE date = CURRENT_DATE;"],
-            "questionNumber": 96
-        },
-        {
-            "text": "You need to document different types of fish on the island. Create a new table named 'fish' with columns 'fish_id' (integer) and 'fish_name' (text). Which SQL statement do you use?",
-            "answers": [
-                "CREATE TABLE fish (fish_id INTEGER, fish_name TEXT);",
-                "MAKE TABLE fish (fish_id INT, fish_name TEXT);",
-                "NEW TABLE fish (fish_id INT, fish_name TEXT);",
-                "BUILD TABLE fish (fish_id INT, fish_name TEXT);"
-            ],
-            "correctSequence": ["CREATE TABLE fish (fish_id INTEGER, fish_name TEXT);"],
-            "questionNumber": 97
-        },
-        {
-            "text": "You want to record your daily meals. Identify the correct SQL statement to delete the entry for a spoiled meal from the 'meals' table where the meal_id is 18.",
-            "answers": [
-                "DELETE FROM meals WHERE meal_id = 18;",
-                "REMOVE FROM meals WHERE meal_id = 18;",
-                "DELETE meals WHERE meal_id = 18;",
-                "REMOVE meal_id = 18 FROM meals;"
-            ],
-            "correctSequence": ["DELETE FROM meals WHERE meal_id = 18;"],
-            "questionNumber": 98
-        },
-        {
-            "text": "You find various types of minerals on the island. Create a new table named 'minerals' with columns 'mineral_id' (integer) and 'mineral_name' (text). Which SQL statement do you use?",
-            "answers": [
-                "CREATE TABLE minerals (mineral_id INTEGER, mineral_name TEXT);",
-                "MAKE TABLE minerals (mineral_id INT, mineral_name TEXT);",
-                "NEW TABLE minerals (mineral_id INT, mineral_name TEXT);",
-                "BUILD TABLE minerals (mineral_id INT, mineral_name TEXT);"
-            ],
-            "correctSequence": ["CREATE TABLE minerals (mineral_id INTEGER, mineral_name TEXT);"],
-            "questionNumber": 99
-        },
-        {
-            "text": "To document the resources you've found, you need to update the resource log. What is the correct SQL statement to select all columns from the 'resources' table where 'is_abundant' is true?",
-            "answers": [
-                "SELECT * FROM resources WHERE is_abundant = true;",
-                "SELECT resources FROM * WHERE is_abundant = true;",
-                "RETRIEVE * FROM resources WHERE is_abundant = true;",
-                "GET * FROM resources WHERE is_abundant = true;"
-            ],
-            "correctSequence": ["SELECT * FROM resources WHERE is_abundant = true;"],
-            "questionNumber": 100
         }
     ]
 }
