@@ -3,102 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="MazztROu4sDUSQZi9IHMZf3ralhBMUQr_0jDs9SyHg8" />
-<title>SQL ISLAND ADVENTURE | Pixel-Perfect SQL Survival Quest</title>
-<meta name="title" content="SQL ISLAND ADVENTURE | Pixel-Perfect SQL Survival Quest">
-<meta name="description" content="CRASH-LANDED! Survive a mysterious pixel island using SQL powers! Drag, drop, and query your way to freedom in this retro-styled coding adventure game.">
-<meta name="keywords" content="pixel SQL game, retro database game, SQL adventure, 8-bit coding, pixel art SQL, plane crash survival game, interactive SQL quest, learn SQL, database puzzles, retro programming game">
-<meta name="author" content="hoodaatwa">
-<meta name="robots" content="index, follow">
-<meta name="language" content="English">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://github.com/hoodaatwa/Quiz/blob/main/index.html">
-<meta property="og:title" content="SQL ISLAND ADVENTURE | Pixel-Perfect SQL Survival Quest">
-<meta property="og:description" content="CRASH-LANDED! Survive a mysterious pixel island using SQL powers! Drag, drop, and query your way to freedom in this retro-styled coding adventure.">
-<meta property="og:image" content="https://raw.githubusercontent.com/hoodaatwa/Quiz/refs/heads/main/2772164.png">
-<meta property="og:image:alt" content="Pixelated SQL adventure game with crashed plane on island">
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://github.com/hoodaatwa/Quiz/blob/main/index.html">
-<meta property="twitter:title" content="SQL ISLAND ADVENTURE | Pixel-Perfect SQL Survival Quest">
-<meta property="twitter:description" content="CRASH-LANDED! Survive a mysterious pixel island using SQL powers! Drag, drop, and query your way to freedom in this retro-styled coding adventure.">
-<meta property="twitter:image" content="https://raw.githubusercontent.com/hoodaatwa/Quiz/refs/heads/main/2772164.png">
-<meta property="twitter:image:alt" content="Pixelated SQL adventure game with crashed plane on island">
-
-<!-- Structured Data (JSON-LD) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoGame",
-  "name": "SQL ISLAND ADVENTURE",
-  "description": "An immersive 8-bit style SQL learning adventure where players are stranded on a pixelated island after a plane crash. Navigate through retro-styled environments, interact with survivors, and use database queries to solve puzzles and escape! Features nostalgic pixel art graphics and vibrant neon colors.",
-  "url": "https://github.com/hoodaatwa/Quiz/blob/main/index.html",
-  "image": "https://raw.githubusercontent.com/hoodaatwa/Quiz/refs/heads/main/2772164.png",
-  "screenshot": "https://raw.githubusercontent.com/hoodaatwa/Quiz/refs/heads/main/2772164.png",
-  "genre": ["Educational Game", "Retro Adventure Game", "Pixel Art Game", "Puzzle Game"],
-  "gamePlayMode": "SinglePlayer",
-  "applicationCategory": "Game, Education",
-  "educationalUse": ["Interactive Learning", "Practice"],
-  "educationalAlignment": {
-    "@type": "AlignmentObject",
-    "alignmentType": "teaches",
-    "targetName": "SQL Database Programming"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "0.00",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/OnlineOnly"
-  },
-  "keywords": "SQL, pixel art, retro game, 8-bit, database learning, adventure game, coding game, survival, island, plane crash, drag and drop",
-  "author": {
-    "@type": "Person",
-    "name": "hoodaatwa"
-  },
-  "gameItem": [
-    {
-      "@type": "Thing",
-      "name": "SQL Commands"
-    },
-    {
-      "@type": "Thing",
-      "name": "Database Tables"
-    }
-  ],
-  "characterstics": [
-    {
-      "@type": "PropertyValue",
-      "name": "Graphics",
-      "value": "Pixel Art"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Theme",
-      "value": "Survival"
-    }
-  ]
-}
-</script>
-
-<!-- Preconnect to font CDN -->
-<link rel="preconnect" href="https://cdnjs.cloudflare.com">
-
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/hoodaatwa/Quiz/refs/heads/main/2772164.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/hoodaatwa/Quiz/refs/heads/main/2772164.png">
-
-<!-- Canonical URL -->
-<link rel="canonical" href="https://github.com/hoodaatwa/Quiz/blob/main/index.html">
-
-<!-- Additional SEO-friendly meta tags -->
-<meta name="revisit-after" content="7 days">
-<meta name="rating" content="General">
-<meta name="theme-color" content="#33a6ff">
-<meta name="format-detection" content="telephone=no">
-<meta name="color-scheme" content="dark">
+    <title>SQL Adventure Quiz</title>
      <style>
         @font-face {
             font-family: 'PixelFont';
@@ -167,7 +72,7 @@
             justify-content: center;
             gap: 20px;
             margin-top: 20px;
-         }
+        }
 
         nav li {
             display: inline-block;
@@ -252,7 +157,8 @@
         .droppable.correct {
             border-color: #00ff00;
             background-color: rgba(0, 255, 0, 0.2);
-            transition: none;
+            transition:none;
+
         }
         
         /* Make sure draggables don't transition when dropped */
@@ -260,7 +166,7 @@
             transform: none;
             box-shadow: none;
             transition: none;
-            margin: 0;
+            margin:0;
             cursor: default;
         }
 
@@ -380,11 +286,16 @@
                 <ul>
                     <li><a href="#" id="quiz-tab">Quiz</a></li>
                     <li><a href="https://hoodaatwa.github.io/Main/" target="_blank">Home</a>
-                    </li>
-                    <li><a href="#" id="guide-tab">Guide</a></li>
+</li>
+<li><a href="#" id="guide-tab">Guide</a></li>
                 </ul>
             </nav>
         </header>
+<div style="margin-top:-30px;">
+                    <button id="load-questions">Load Questions</button>
+                    <button id="load-tutorial">Load Tutorial</button>
+                    <button id="load-basics">Load Basics</button>
+                </div>
         <main>
             <section id="quiz-section">
                 <p>Welcome to the SQL Adventure Quiz! Follow the storyline and complete the quiz questions.</p>
@@ -582,25 +493,39 @@ document.getElementById('reset-level').addEventListener('click', function() {
     loadQuestion(currentQuestionIndex);
 });
 
-// Show loader while fetching questions
-document.getElementById('loading').classList.remove('hidden');
+// Function to load questions from a selected JSON file
+function loadContent(file) {
+    document.getElementById('loading').classList.remove('hidden');
 
-fetch('https://raw.githubusercontent.com/hoodaatwa/Quiz/main/questions.json')
-    .then(response => response.json())
-    .then(data => {
-        questions = data.questions;
-        // Load saved question index from local storage
-        const savedIndex = localStorage.getItem('currentQuestionIndex');
-        if (savedIndex !== null) {
-            currentQuestionIndex = parseInt(savedIndex);
-        }
-        loadQuestion(currentQuestionIndex);
-        document.getElementById('loading').classList.add('hidden');
-    })
-    .catch(error => {
-        console.error('Error fetching questions:', error);
-        document.getElementById('loading').classList.add('hidden');
-    });
+    fetch(`https://raw.githubusercontent.com/hoodaatwa/Quiz/main/${file}`)
+        .then(response => response.json())
+        .then(data => {
+            questions = data.questions;
+            // Load saved question index from local storage
+            const savedIndex = localStorage.getItem('currentQuestionIndex');
+            if (savedIndex !== null) {
+                currentQuestionIndex = parseInt(savedIndex);
+            }
+            loadQuestion(currentQuestionIndex);
+            document.getElementById('loading').classList.add('hidden');
+        })
+        .catch(error => {
+            console.error(`Error fetching ${file}:`, error);
+            document.getElementById('loading').classList.add('hidden');
+        });
+}
+
+document.getElementById('load-questions').addEventListener('click', function() {
+    loadContent('questions.json');
+});
+
+document.getElementById('load-tutorial').addEventListener('click', function() {
+    loadContent('tutorial.json');
+});
+
+document.getElementById('load-basics').addEventListener('click', function() {
+    loadContent('basics.json');
+});
 
 // Function to load guide data into accordion
 function loadGuides() {
